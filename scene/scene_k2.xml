@@ -1,0 +1,123 @@
+﻿<krpano>
+
+	<!-- К2 -->
+
+	<scene name="scene_k2_1" title="К2" onstart="" thumburl="panos/k2/k2_1.tiles/thumb.jpg" lat="51.24586111" lng="86.06486111" alt="399.80" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/k2/k2_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/k2/k2_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113082464" style="skin_hotspotstyle" ath="69.389" atv="12.712" depth="1000.0" linkedscene="scene_street_10" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113082667" style="skin_hotspotstyle" ath="158.586" atv="30.851" depth="1000.0" linkedscene="scene_k2_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_k2_2" title="Холл" onstart="" thumburl="panos/k2/k2_2.tiles/thumb.jpg" lat="51.24583333" lng="86.06488889" alt="401.30" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/k2/k2_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/k2/k2_2.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113082747" style="skin_hotspotstyle" ath="2.698" atv="35.48" depth="1000.0" linkedscene="scene_k2_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113083890" style="skin_hotspotstyle" ath="-177.037" atv="22.176" depth="1000.0" linkedscene="scene_k2_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113084870" style="skin_hotspotstyle" ath="163.8" atv="-21.75" depth="1000.0" linkedscene="scene_k2_7" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_k2_3" title="Коридор" onstart="" thumburl="panos/k2/k2_3.tiles/thumb.jpg" lat="51.24580556" lng="86.06483333" alt="399.30" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/k2/k2_3.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/k2/k2_3.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113083966" style="skin_hotspotstyle" ath="27.091" atv="19.218" depth="1000.0" linkedscene="scene_k2_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113084116" style="skin_hotspotstyle" ath="87.44" atv="33.985" depth="1000.0" linkedscene="scene_k2_4" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113084295" style="skin_hotspotstyle" ath="137.459" atv="36.203" depth="1000.0" linkedscene="scene_k2_5" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113084572" style="skin_hotspotstyle" ath="-176.423" atv="35.707" depth="1000.0" linkedscene="scene_k2_6" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_k2_4" title="Санузел" onstart="" thumburl="panos/k2/k2_4.tiles/thumb.jpg" lat="51.24583333" lng="86.06486111" alt="398.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/k2/k2_4.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/k2/k2_4.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113084200" style="skin_hotspotstyle" ath="-92.256" atv="51.797" depth="1000.0" linkedscene="scene_k2_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_k2_5" title="Спальня 1" onstart="" thumburl="panos/k2/k2_5.tiles/thumb.jpg" lat="51.24583333" lng="86.06488889" alt="397.30" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/k2/k2_5.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/k2/k2_5.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113084450" style="skin_hotspotstyle" ath="-55.817" atv="46.114" depth="1000.0" linkedscene="scene_k2_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_k2_6" title="Чёрный вход" onstart="" thumburl="panos/k2/k2_6.tiles/thumb.jpg" lat="51.24577778" lng="86.06491667" alt="397.90" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/k2/k2_6.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/k2/k2_6.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113084688" style="skin_hotspotstyle" ath="8.669" atv="40.534" depth="1000.0" linkedscene="scene_k2_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_k2_7" title="Спальня 2" onstart="" thumburl="panos/k2/k2_7.tiles/thumb.jpg" lat="51.24577778" lng="86.06491667" alt="397.90" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/k2/k2_7.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/k2/k2_7.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113089012" style="skin_hotspotstyle" ath="9.471" atv="43.503" depth="1000.0" linkedscene="scene_k2_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+</krpano>

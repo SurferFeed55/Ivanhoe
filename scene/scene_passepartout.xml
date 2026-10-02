@@ -1,0 +1,72 @@
+﻿<krpano>
+
+	<!-- Паспарту -->
+
+	<scene name="scene_passepartout_1" title="Паспарту" onstart="" thumburl="panos/passepartout/passepartout_1.tiles/thumb.jpg" lat="51.24608333" lng="86.06438889" alt="401.60" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/passepartout/passepartout_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/passepartout/passepartout_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113092848" style="skin_hotspotstyle" ath="-100.891" atv="10.227" depth="1000.0" linkedscene="scene_street_11" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2114879318" style="skin_hotspotstyle" ath="80.561" atv="33.198" depth="1000.0" linkedscene="scene_passepartout_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_passepartout_2" title="Комната" onstart="" thumburl="panos/vrungel/vrungel_02.tiles/thumb.jpg" lat="51.24572222" lng="86.06433333" alt="404.90" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/vrungel/vrungel_02.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/vrungel/vrungel_02.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113095668" style="skin_hotspotstyle" ath="1.778" atv="30.91" depth="1000.0" linkedscene="scene_passepartout_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113095784" style="skin_hotspotstyle" ath="-139.92" atv="28.41" depth="1000.0" linkedscene="scene_passepartout_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113096012" style="skin_hotspotstyle" ath="-175.086" atv="-41.522" depth="1000.0" linkedscene="scene_passepartout_4" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_passepartout_3" title="Санузел" onstart="" thumburl="panos/vrungel/vrungel_03.tiles/thumb.jpg" lat="51.24569444" lng="86.06430556" alt="401.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/vrungel/vrungel_03.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/vrungel/vrungel_03.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113095914" style="skin_hotspotstyle" ath="1.526" atv="62.738" depth="1000.0" linkedscene="scene_passepartout_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_passepartout_4" title="Спальня" onstart="" thumburl="panos/vrungel/vrungel_04.tiles/thumb.jpg" lat="51.24569444" lng="86.06427778" alt="397.80" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/vrungel/vrungel_04.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/vrungel/vrungel_04.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113096121" style="skin_hotspotstyle" ath="2.406" atv="62.07" depth="1000.0" linkedscene="scene_passepartout_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+	
+</krpano>

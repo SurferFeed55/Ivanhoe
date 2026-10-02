@@ -1,0 +1,57 @@
+﻿<krpano>
+
+	<!-- Ресторан -->
+
+	<scene name="scene_restaurant_1" title="Уличная веранда" onstart="" thumburl="panos/restaurant/restaurant_1.tiles/thumb.jpg" lat="51.24469444" lng="86.06491667" alt="403.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/restaurant/restaurant_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/restaurant/restaurant_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112424258" style="skin_hotspotstyle" ath="-136.682" atv="10.035" depth="1000.0" linkedscene="scene_street_5_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112424556" style="skin_hotspotstyle" ath="123.151" atv="10.609" depth="1000.0" linkedscene="scene_restaurant_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_restaurant_2" title="Крытая веранда" onstart="" thumburl="panos/restaurant/restaurant_2.tiles/thumb.jpg" lat="51.24483333" lng="86.06491667" alt="407.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/restaurant/restaurant_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/restaurant/restaurant_2.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112424690" style="skin_hotspotstyle" ath="-138.102" atv="10.756" depth="1000.0" linkedscene="scene_restaurant_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112424866" style="skin_hotspotstyle" ath="126.344" atv="10.922" depth="1000.0" linkedscene="scene_restaurant_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_restaurant_3" title="Уличная веранда с бассейном" onstart="" thumburl="panos/restaurant/restaurant_3.tiles/thumb.jpg" lat="51.24491667" lng="86.06502778" alt="402.90" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/restaurant/restaurant_3.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/restaurant/restaurant_3.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112424950" style="skin_hotspotstyle" ath="-132.044" atv="8.122" depth="1000.0" linkedscene="scene_restaurant_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112431747" style="skin_hotspotstyle" ath="70.573" atv="7.41" depth="1000.0" linkedscene="scene_pool" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112432080" style="skin_hotspotstyle" ath="139.952" atv="7.939" depth="1000.0" linkedscene="scene_street_6" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+</krpano>

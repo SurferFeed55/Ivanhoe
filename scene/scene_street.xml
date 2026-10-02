@@ -1,0 +1,1239 @@
+﻿<krpano>
+
+	<!-- Улица -->
+
+   <scene name="scene_street_1" title="Главный вход" onstart="update_street_radar(dot_scene_street_1, 0.0); show_street_map();" thumburl="panos/street/street_1.tiles/thumb.jpg" lat="51.24397222" lng="86.06483333" alt="405.50" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112415390" style="skin_hotspotstyle" ath="14.039" atv="5.169" depth="1000.0" linkedscene="scene_street_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_2" title="Парковка" onstart="update_street_radar(dot_scene_street_2, 0.0); show_street_map();" thumburl="panos/street/street_2.tiles/thumb.jpg" lat="51.24394444" lng="86.06475000" alt="406.10" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_2.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112415273" style="skin_hotspotstyle" ath="79.468" atv="7.304" depth="1000.0" linkedscene="scene_street_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112415660" style="skin_hotspotstyle" ath="172.665" atv="3.515" depth="1000.0" linkedscene="scene_street_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112415987" style="skin_hotspotstyle" ath="-88.09" atv="11.201" depth="1000.0" linkedscene="scene_street_42" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_3" title="Улица 1" onstart="update_street_radar(dot_scene_street_3, 0.0); show_street_map();" thumburl="panos/street/street_3.tiles/thumb.jpg" lat="51.24413889" lng="86.06494444" alt="403.80" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_3.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_3.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112414844" style="skin_hotspotstyle" ath="92.474" atv="5.706" depth="1000.0" linkedscene="scene_street_4" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112415115" style="skin_hotspotstyle" ath="-98.964" atv="4.764" depth="1000.0" linkedscene="scene_street_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_3_1" title="Детская площадка" onstart="update_street_radar(dot_scene_street_3_1, 0.0); show_street_map();" thumburl="panos/street/street_3_1.tiles/thumb.jpg" lat="51.24411111" lng="86.06450000" alt="405.30" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_3_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_3_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112417824" style="skin_hotspotstyle" ath="-33.652" atv="15.605" depth="1000.0" linkedscene="scene_street_25" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112418194" style="skin_hotspotstyle" ath="58.755" atv="9.417" depth="1000.0" linkedscene="scene_street_24" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112418778" style="skin_hotspotstyle" ath="-147.234" atv="3.537" depth="1000.0" linkedscene="scene_street_42" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_4" title="Улица 2" onstart="update_street_radar(dot_scene_street_4, 0.0); show_street_map();" thumburl="panos/street/street_4.tiles/thumb.jpg" lat="51.24436111" lng="86.06505556" alt="402.70" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_4.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_4.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112414461" style="skin_hotspotstyle" ath="93.674" atv="5.894" depth="1000.0" linkedscene="scene_street_5" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112414681" style="skin_hotspotstyle" ath="-90.312" atv="4.925" depth="1000.0" linkedscene="scene_street_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112432801" style="skin_hotspotstyle" ath="-11.516" atv="11.909" depth="1000.0" linkedscene="scene_reception_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_5" title="Улица 3" onstart="update_street_radar(dot_scene_street_5, 0.0); show_street_map();" thumburl="panos/street/street_5.tiles/thumb.jpg" lat="51.24458333" lng="86.06513889" alt="403.10" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_5.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_5.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112153348" style="skin_hotspotstyle" ath="88.284" atv="5.005" depth="1000.0" linkedscene="scene_street_6" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112414316" style="skin_hotspotstyle" ath="-89.69" atv="2.438" depth="1000.0" linkedscene="scene_street_4" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112421903" style="skin_hotspotstyle" ath="-3.206" atv="15.454" depth="1000.0" linkedscene="scene_street_5_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_5_1" title="Улица 3.1" onstart="update_street_radar(dot_scene_street_5_1, 0.0); show_street_map();" thumburl="panos/street/street_5_1.tiles/thumb.jpg" lat="51.24469444" lng="86.06477778" alt="401.70" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_5_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_5_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112421981" style="skin_hotspotstyle" ath="-177.393" atv="6.915" depth="1000.0" linkedscene="scene_street_5" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112422448" style="skin_hotspotstyle" ath="-1.893" atv="7.721" depth="1000.0" linkedscene="scene_street_5_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112423858" style="skin_hotspotstyle" ath="51.576" atv="6.965" depth="1000.0" linkedscene="scene_restaurant_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_5_2" title="Улица 3.2" onstart="update_street_radar(dot_scene_street_5_2, 0.0); show_street_map();" thumburl="panos/street/street_5_2.tiles/thumb.jpg" lat="51.24452778" lng="86.06469444" alt="400.40" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_5_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_5_2.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112422512" style="skin_hotspotstyle" ath="175.001" atv="2.794" depth="1000.0" linkedscene="scene_street_5_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112422936" style="skin_hotspotstyle" ath="-72.529" atv="2.872" depth="1000.0" linkedscene="scene_street_24" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_6" title="Улица 4" onstart="update_street_radar(dot_scene_street_6, 0.0); show_street_map();" thumburl="panos/street/street_6.tiles/thumb.jpg" lat="51.24486111" lng="86.06511111" alt="402.40" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_6.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_6.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112153091" style="skin_hotspotstyle" ath="63.825" atv="4.094" depth="1000.0" linkedscene="scene_street_7" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112153216" style="skin_hotspotstyle" ath="-150.704" atv="5.011" depth="1000.0" linkedscene="scene_street_5" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112432451" style="skin_hotspotstyle" ath="-71.418" atv="5.026" depth="1000.0" linkedscene="scene_restaurant_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_7" title="Улица 5" onstart="update_street_radar(dot_scene_street_7, 0.0); show_street_map();" thumburl="panos/street/street_7.tiles/thumb.jpg" lat="51.24522222" lng="86.06508333" alt="401.60" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_7.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_7.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112152790" style="skin_hotspotstyle" ath="78.062" atv="3.268" depth="1000.0" linkedscene="scene_street_8" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112152983" style="skin_hotspotstyle" ath="-106.473" atv="4.342" depth="1000.0" linkedscene="scene_street_6" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112433618" style="skin_hotspotstyle" ath="6.04" atv="8.641" depth="1000.0" linkedscene="scene_street_7_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113080176" style="skin_hotspotstyle" ath="158.539" atv="7.958" depth="1000.0" linkedscene="scene_hangar_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_7_1" title="Улица 5.1" onstart="update_street_radar(dot_scene_street_7_1, 0.0); show_street_map();" thumburl="panos/street/street_7_1.tiles/thumb.jpg" lat="51.24519444" lng="86.06511111" alt="401.30" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_7_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_7_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112433741" style="skin_hotspotstyle" ath="179.304" atv="6.482" depth="1000.0" linkedscene="scene_street_7" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112433914" style="skin_hotspotstyle" ath="-85.277" atv="14.308" depth="1000.0" linkedscene="scene_pool" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112434625" style="skin_hotspotstyle" ath="3.957" atv="5.101" depth="1000.0" linkedscene="scene_street_7_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_pool" title="Бассейн" onstart="update_street_radar(dot_scene_pool, 0.0); show_street_map();" thumburl="panos/pool/pool.tiles/thumb.jpg" lat="51.24483333" lng="86.06480556" alt="401.10" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/pool/pool.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/pool/pool.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112431901" style="skin_hotspotstyle" ath="-127.223" atv="1.856" depth="1000.0" linkedscene="scene_restaurant_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112434051" style="skin_hotspotstyle" ath="82.42" atv="7.554" depth="1000.0" linkedscene="scene_street_7_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_7_2" title="Улица 5.2" onstart="update_street_radar(dot_scene_street_7_2, 0.0); show_street_map();" thumburl="panos/street/street_7_2.tiles/thumb.jpg" lat="51.24616667" lng="86.06411111" alt="402.50" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_7_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_7_2.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112434715" style="skin_hotspotstyle" ath="-168.91" atv="0.669" depth="1000.0" linkedscene="scene_street_7_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112434943" style="skin_hotspotstyle" ath="20.474" atv="1.485" depth="1000.0" linkedscene="scene_street_7_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113098048" style="skin_hotspotstyle" ath="-111.349" atv="6.25" depth="1000.0" linkedscene="scene_freedom_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_7_3" title="Улица 5.3" onstart="update_street_radar(dot_scene_street_7_3, 0.0); show_street_map();" thumburl="panos/street/street_7_3.tiles/thumb.jpg" lat="51.24552778" lng="86.06430556" alt="397.60" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_7_3.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_7_3.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112435022" style="skin_hotspotstyle" ath="179.366" atv="10.261" depth="1000.0" linkedscene="scene_street_7_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112435213" style="skin_hotspotstyle" ath="7.002" atv="5.198" depth="1000.0" linkedscene="scene_street_7_4" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113096388" style="skin_hotspotstyle" ath="-108.355" atv="12.221" depth="1000.0" linkedscene="scene_tom_sawyer_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_7_4" title="Улица 5.4" onstart="update_street_radar(dot_scene_street_7_4, 0.0); show_street_map();" thumburl="panos/street/street_7_4.tiles/thumb.jpg" lat="51.24558333" lng="86.06422222" alt="405.20" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_7_4.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_7_4.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112435313" style="skin_hotspotstyle" ath="-106.547" atv="10.116" depth="1000.0" linkedscene="scene_street_7_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112435637" style="skin_hotspotstyle" ath="59.723" atv="14.485" depth="1000.0" linkedscene="scene_street_13" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113095174" style="skin_hotspotstyle" ath="-169.832" atv="6.826" depth="1000.0" linkedscene="scene_vrungel_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_8" title="Улица 6" onstart="update_street_radar(dot_scene_street_8, 0.0); show_street_map();" thumburl="panos/street/street_8.tiles/thumb.jpg" lat="51.24530556" lng="86.06497222" alt="400.20" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_8.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_8.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112152475" style="skin_hotspotstyle" ath="76.12" atv="4.17" depth="1000.0" linkedscene="scene_street_9" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112152632" style="skin_hotspotstyle" ath="-95.527" atv="1.41" depth="1000.0" linkedscene="scene_street_7" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112436063" style="skin_hotspotstyle" ath="1.764" atv="13.126" depth="1000.0" linkedscene="scene_street_8_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_8_1" title="Улица 6.1" onstart="update_street_radar(dot_scene_street_8_1, 0.0); show_street_map();" thumburl="panos/street/street_8_1.tiles/thumb.jpg" lat="51.24558333" lng="86.06486111" alt="402.60" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_8_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_8_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112436150" style="skin_hotspotstyle" ath="177.727" atv="4.027" depth="1000.0" linkedscene="scene_street_8" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113081055" style="skin_hotspotstyle" ath="-81.814" atv="5.081" depth="1000.0" linkedscene="scene_anderson_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113081472" style="skin_hotspotstyle" ath="43.234" atv="8.169" depth="1000.0" linkedscene="scene_pickman" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_9" title="Улица 7" onstart="update_street_radar(dot_scene_street_9, 0.0); show_street_map();" thumburl="panos/street/street_9.tiles/thumb.jpg" lat="51.24583333" lng="86.06519444" alt="399.70" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_9.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_9.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112152055" style="skin_hotspotstyle" ath="12.041" atv="6.441" depth="1000.0" linkedscene="scene_street_10" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112152357" style="skin_hotspotstyle" ath="-110.866" atv="0.643" depth="1000.0" linkedscene="scene_street_8" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_10" title="Улица 8" onstart="update_street_radar(dot_scene_street_10, 0.0); show_street_map();" thumburl="panos/street/street_10.tiles/thumb.jpg" lat="51.24600000" lng="86.06477778" alt="397.70" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_10.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_10.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112151597" style="skin_hotspotstyle" ath="1.144" atv="0.295" depth="1000.0" linkedscene="scene_street_11" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112151924" style="skin_hotspotstyle" ath="-178.568" atv="2.297" depth="1000.0" linkedscene="scene_street_9" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113082053" style="skin_hotspotstyle" ath="-114.674" atv="4.496" depth="1000.0" linkedscene="scene_k2_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113090337" style="skin_hotspotstyle" ath="58.069" atv="3.706" depth="1000.0" linkedscene="scene_grand_chalet_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_11" title="Улица 9" onstart="update_street_radar(dot_scene_street_11, 0.0); show_street_map();" thumburl="panos/street/street_11.tiles/thumb.jpg" lat="51.24613889" lng="86.06408333" alt="402.80" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_11.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_11.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112151254" style="skin_hotspotstyle" ath="-0.62" atv="3.509" depth="1000.0" linkedscene="scene_street_12" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112151481" style="skin_hotspotstyle" ath="-179.258" atv="5.269" depth="1000.0" linkedscene="scene_street_10" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113092622" style="skin_hotspotstyle" ath="80.479" atv="6.582" depth="1000.0" linkedscene="scene_passepartout_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2114879501" style="skin_hotspotstyle" ath="-110.086" atv="3.625" depth="1000.0" linkedscene="scene_shukshin_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_12" title="Улица 10" onstart="update_street_radar(dot_scene_street_12, 0.0); show_street_map();" thumburl="panos/street/street_12.tiles/thumb.jpg" lat="51.24616667" lng="86.06411111" alt="402.50" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_12.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_12.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112147678" style="skin_hotspotstyle" ath="-113.65" atv="1.696" depth="1000.0" linkedscene="scene_street_13" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112147908" style="skin_hotspotstyle" ath="-7.889" atv="5.886" depth="1000.0" linkedscene="scene_street_12_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112151146" style="skin_hotspotstyle" ath="168.874" atv="4.769" depth="1000.0" linkedscene="scene_street_11" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113093098" style="skin_hotspotstyle" ath="61.588" atv="5.539" depth="1000.0" linkedscene="scene_bathhouseb_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_12_1" title="Платформа для йоги" onstart="update_street_radar(dot_scene_street_12_1, 0.0); show_street_map();" thumburl="panos/street/street_12_1.tiles/thumb.jpg" lat="51.24611111" lng="86.06380556" alt="405.80" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_12_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_12_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112150788" style="skin_hotspotstyle" ath="-169.835" atv="11.752" depth="1000.0" linkedscene="scene_street_12" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_13" title="Улица 11" onstart="update_street_radar(dot_scene_street_13, 0.0); show_street_map();" thumburl="panos/street/street_13.tiles/thumb.jpg" lat="51.24561111" lng="86.06405556" alt="400.50" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_13.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_13.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112146993" style="skin_hotspotstyle" ath="-80.69" atv="0.898" depth="1000.0" linkedscene="scene_street_14" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112147541" style="skin_hotspotstyle" ath="96.8" atv="2.674" depth="1000.0" linkedscene="scene_street_12" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112435807" style="skin_hotspotstyle" ath="-140.331" atv="12.917" depth="1000.0" linkedscene="scene_street_7_4" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_14" title="Улица 12" onstart="update_street_radar(dot_scene_street_14, 0.0); show_street_map();" thumburl="panos/street/street_14.tiles/thumb.jpg" lat="51.24550000" lng="86.06380556" alt="404.30" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_14.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_14.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112146513" style="skin_hotspotstyle" ath="-93.122" atv="6.517" depth="1000.0" linkedscene="scene_street_15" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112146843" style="skin_hotspotstyle" ath="83.768" atv="6.408" depth="1000.0" linkedscene="scene_street_13" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113100454" style="skin_hotspotstyle" ath="-7.961" atv="5.864" depth="1000.0" linkedscene="scene_bathhousel_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_15" title="Улица 13" onstart="update_street_radar(dot_scene_street_15, 0.0); show_street_map();" thumburl="panos/street/street_15.tiles/thumb.jpg" lat="51.24536111" lng="86.06380556" alt="403.40" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_15.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_15.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112146165" style="skin_hotspotstyle" ath="-89.362" atv="4.017" depth="1000.0" linkedscene="scene_street_16" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112146374" style="skin_hotspotstyle" ath="90.063" atv="8.093" depth="1000.0" linkedscene="scene_street_14" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_16" title="Улица 14" onstart="update_street_radar(dot_scene_street_16, 0.0); show_street_map();" thumburl="panos/street/street_16.tiles/thumb.jpg" lat="51.24525000" lng="86.06375000" alt="405.10" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_16.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_16.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112145858" style="skin_hotspotstyle" ath="-96.27" atv="13.546" depth="1000.0" linkedscene="scene_street_17" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112146038" style="skin_hotspotstyle" ath="94.765" atv="5.724" depth="1000.0" linkedscene="scene_street_15" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113102841" style="skin_hotspotstyle" ath="3.175" atv="4.278" depth="1000.0" linkedscene="scene_bathhousem_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_17" title="Улица 15" onstart="update_street_radar(dot_scene_street_17, 0.0); show_street_map();" thumburl="panos/street/street_17.tiles/thumb.jpg" lat="51.24522222" lng="86.06391667" alt="405.50" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_17.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_17.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112145360" style="skin_hotspotstyle" ath="-95.759" atv="6.075" depth="1000.0" linkedscene="scene_street_18" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112145685" style="skin_hotspotstyle" ath="92.799" atv="12.787" depth="1000.0" linkedscene="scene_street_16" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113106554" style="skin_hotspotstyle" ath="-171.82" atv="12.065" depth="1000.0" linkedscene="scene_fox_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_18" title="Улица 16" onstart="update_street_radar(dot_scene_street_18, 0.0); show_street_map();" thumburl="panos/street/street_18.tiles/thumb.jpg" lat="51.24502778" lng="86.06377778" alt="402.10" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_18.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_18.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112144744" style="skin_hotspotstyle" ath="-117.629" atv="10.112" depth="1000.0" linkedscene="scene_street_19" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112145225" style="skin_hotspotstyle" ath="59.676" atv="5.279" depth="1000.0" linkedscene="scene_street_17" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2124418462" style="skin_hotspotstyle" ath="-175.677" atv="6.487" depth="1000.0" linkedscene="scene_chagall_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_19" title="Улица 17" onstart="update_street_radar(dot_scene_street_19, 0.0); show_street_map();" thumburl="panos/street/street_19.tiles/thumb.jpg" lat="51.24502778" lng="86.06380556" alt="402.60" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_19.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_19.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112144300" style="skin_hotspotstyle" ath="36.811" atv="7.783" depth="1000.0" linkedscene="scene_air_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112144625" style="skin_hotspotstyle" ath="92.497" atv="10.772" depth="1000.0" linkedscene="scene_street_18" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112144964" style="skin_hotspotstyle" ath="-95.83" atv="3.78" depth="1000.0" linkedscene="scene_street_20" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_20" title="Улица 18" onstart="update_street_radar(dot_scene_street_20, 0.0); show_street_map();" thumburl="panos/street/street_20.tiles/thumb.jpg" lat="51.24483333" lng="86.06383333" alt="403.70" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_20.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_20.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112145053" style="skin_hotspotstyle" ath="91.185" atv="5.281" depth="1000.0" linkedscene="scene_street_19" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112421434" style="skin_hotspotstyle" ath="-89.817" atv="8.809" depth="1000.0" linkedscene="scene_street_21" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113111888" style="skin_hotspotstyle" ath="-2.088" atv="14.677" depth="1000.0" linkedscene="scene_wing_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_21" title="Улица 19" onstart="update_street_radar(dot_scene_street_21, 0.0); show_street_map();" thumburl="panos/street/street_21.tiles/thumb.jpg" lat="51.24461111" lng="86.06380556" alt="401.80" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_21.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_21.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112421017" style="skin_hotspotstyle" ath="-131.126" atv="4.868" depth="1000.0" linkedscene="scene_street_22" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112421326" style="skin_hotspotstyle" ath="82.246" atv="6.883" depth="1000.0" linkedscene="scene_street_20" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112436687" style="skin_hotspotstyle" ath="-94.848" atv="5.01" depth="1000.0" linkedscene="scene_street_21_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113112384" style="skin_hotspotstyle" ath="169.769" atv="7.386" depth="1000.0" linkedscene="scene_scriabin_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_21_1" title="Улица 19.1" onstart="update_street_radar(dot_scene_street_21_1, 0.0); show_street_map();" thumburl="panos/street/street_21_1.tiles/thumb.jpg" lat="51.24450000" lng="86.06419444" alt="401.90" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_21_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_21_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112436784" style="skin_hotspotstyle" ath="89.698" atv="-0.716" depth="1000.0" linkedscene="scene_street_21" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112436912" style="skin_hotspotstyle" ath="-85.922" atv="2.771" depth="1000.0" linkedscene="scene_street_21_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_21_2" title="Улица 19.2" onstart="update_street_radar(dot_scene_street_21_2, 0.0); show_street_map();" thumburl="panos/street/street_21_2.tiles/thumb.jpg" lat="51.24402778" lng="86.06386111" alt="396.50" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_21_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_21_2.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112437002" style="skin_hotspotstyle" ath="80.782" atv="2.681" depth="1000.0" linkedscene="scene_street_21_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112438151" style="skin_hotspotstyle" ath="-101.904" atv="8.846" depth="1000.0" linkedscene="scene_street_27" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112522218" style="skin_hotspotstyle" ath="-6.787" atv="14.448" depth="1000.0" linkedscene="scene_roerich_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_22" title="Улица 20" onstart="update_street_radar(dot_scene_street_22, 0.0); show_street_map();" thumburl="panos/street/street_22.tiles/thumb.jpg" lat="51.24438889" lng="86.06402778" alt="401.40" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_22.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_22.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112420544" style="skin_hotspotstyle" ath="-146.735" atv="5.704" depth="1000.0" linkedscene="scene_street_23" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112420866" style="skin_hotspotstyle" ath="32.831" atv="2.379" depth="1000.0" linkedscene="scene_street_21" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2114878091" style="skin_hotspotstyle" ath="-63.999" atv="7.019" depth="1000.0" linkedscene="scene_satellite_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_23" title="Улица 21" onstart="update_street_radar(dot_scene_street_23, 0.0); show_street_map();" thumburl="panos/street/street_23.tiles/thumb.jpg" lat="51.24447222" lng="86.06405556" alt="401.30" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_23.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_23.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112419741" style="skin_hotspotstyle" ath="-179.367" atv="4.979" depth="1000.0" linkedscene="scene_street_24" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112420607" style="skin_hotspotstyle" ath="0.525" atv="4.116" depth="1000.0" linkedscene="scene_street_22" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2114899346" style="skin_hotspotstyle" ath="54.359" atv="6.24" depth="1000.0" linkedscene="scene_diaghilev_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_24" title="Улица 22" onstart="update_street_radar(dot_scene_street_24, 0.0); show_street_map();" thumburl="panos/street/street_24.tiles/thumb.jpg" lat="51.24455556" lng="86.06463889" alt="403.50" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_24.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_24.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112417465" style="skin_hotspotstyle" ath="-87.511" atv="2.449" depth="1000.0" linkedscene="scene_street_25" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112418352" style="skin_hotspotstyle" ath="-119.153" atv="4.332" depth="1000.0" linkedscene="scene_stret_3_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112419658" style="skin_hotspotstyle" ath="23.702" atv="8.464" depth="1000.0" linkedscene="scene_street_23" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112423248" style="skin_hotspotstyle" ath="93.127" atv="3.533" depth="1000.0" linkedscene="scene_street_5_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_25" title="Улица 23" onstart="update_street_radar(dot_scene_street_25, 0.0); show_street_map();" thumburl="panos/street/street_25.tiles/thumb.jpg" lat="51.24416667" lng="86.06427778" alt="401.40" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_25.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_25.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112416927" style="skin_hotspotstyle" ath="-153.0" atv="-1.434" depth="1000.0" linkedscene="scene_street_42" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112417344" style="skin_hotspotstyle" ath="101.015" atv="4.002" depth="1000.0" linkedscene="scene_street_24" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112417998" style="skin_hotspotstyle" ath="155.642" atv="7.072" depth="1000.0" linkedscene="scene_street_3_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112437277" style="skin_hotspotstyle" ath="-19.068" atv="8.502" depth="1000.0" linkedscene="scene_street_26" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_26" title="Улица 24" onstart="update_street_radar(dot_scene_street_26, 0.0); show_street_map();" thumburl="panos/street/street_26.tiles/thumb.jpg" lat="51.24413889" lng="86.06405556" alt="400.80" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_26.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_26.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112437351" style="skin_hotspotstyle" ath="176.019" atv="4.903" depth="1000.0" linkedscene="scene_street_25" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112437793" style="skin_hotspotstyle" ath="-17.849" atv="9.695" depth="1000.0" linkedscene="scene_street_27" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112524276" style="skin_hotspotstyle" ath="61.49" atv="8.2" depth="1000.0" linkedscene="scene_mink_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112524793" style="skin_hotspotstyle" ath="-86.737" atv="2.997" depth="1000.0" linkedscene="scene_munchausen_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_27" title="Улица 25" onstart="update_street_radar(dot_scene_street_27, 0.0); show_street_map();" thumburl="panos/street/street_27.tiles/thumb.jpg" lat="51.24411111" lng="86.06386111" alt="399.20" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_27.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_27.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112437862" style="skin_hotspotstyle" ath="163.927" atv="0.699" depth="1000.0" linkedscene="scene_street_26" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112438038" style="skin_hotspotstyle" ath="94.506" atv="7.746" depth="1000.0" linkedscene="scene_street_21_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112439747" style="skin_hotspotstyle" ath="-11.892" atv="11.813" depth="1000.0" linkedscene="scene_street_28" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112521614" style="skin_hotspotstyle" ath="-79.708" atv="2.437" depth="1000.0" linkedscene="scene_debussy_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_28" title="Улица 26" onstart="update_street_radar(dot_scene_street_28, 0.0); show_street_map();" thumburl="panos/street/street_28.tiles/thumb.jpg" lat="51.24408333" lng="86.06388889" alt="398.80" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_28.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_28.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112439815" style="skin_hotspotstyle" ath="96.476" atv="10.101" depth="1000.0" linkedscene="scene_street_27" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112440246" style="skin_hotspotstyle" ath="-26.82" atv="21.421" depth="1000.0" linkedscene="scene_street_28_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112441955" style="skin_hotspotstyle" ath="-117.711" atv="4.209" depth="1000.0" linkedscene="scene_street_29" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_28_1" title="Улица 26.1" onstart="update_street_radar(dot_scene_street_28_1, 0.0); show_street_map();" thumburl="panos/street/street_28_1.tiles/thumb.jpg" lat="51.24394444" lng="86.06352778" alt="396.20" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_28_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_28_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112440322" style="skin_hotspotstyle" ath="158.504" atv="-3.977" depth="1000.0" linkedscene="scene_street_28" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112440740" style="skin_hotspotstyle" ath="22.514" atv="10.718" depth="1000.0" linkedscene="scene_street_28_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_28_2" title="Улица 26.2" onstart="update_street_radar(dot_scene_street_28_2, 0.0); show_street_map();" thumburl="panos/street/street_28_2.tiles/thumb.jpg" lat="51.24405556" lng="86.06333333" alt="392.50" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_28_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_28_2.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112440830" style="skin_hotspotstyle" ath="-140.304" atv="-0.387" depth="1000.0" linkedscene="scene_street_28_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_29" title="Улица 27" onstart="update_street_radar(dot_scene_street_29, 0.0); show_street_map();" thumburl="panos/street/street_29.tiles/thumb.jpg" lat="51.24394444" lng="86.06358333" alt="397.20" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_29.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_29.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112442108" style="skin_hotspotstyle" ath="85.065" atv="9.593" depth="1000.0" linkedscene="scene_street_28" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112442280" style="skin_hotspotstyle" ath="-79.222" atv="6.01" depth="1000.0" linkedscene="scene_street_30" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_30" title="Улица 28" onstart="update_street_radar(dot_scene_street_30, 0.0); show_street_map();" thumburl="panos/street/street_30.tiles/thumb.jpg" lat="51.24355556" lng="86.06355556" alt="395.50" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_30.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_30.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112442354" style="skin_hotspotstyle" ath="120.395" atv="1.856" depth="1000.0" linkedscene="scene_street_29" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112443382" style="skin_hotspotstyle" ath="-87.775" atv="-1.284" depth="1000.0" linkedscene="scene_street_32" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_32" title="Улица 30" onstart="update_street_radar(dot_scene_street_32, 0.0); show_street_map();" thumburl="panos/street/street_32.tiles/thumb.jpg" lat="51.24327778" lng="86.06377778" alt="396.40" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_32.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_32.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112443524" style="skin_hotspotstyle" ath="99.348" atv="2.855" depth="1000.0" linkedscene="scene_street_30" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112445942" style="skin_hotspotstyle" ath="37.425" atv="19.247" depth="1000.0" linkedscene="scene_street_32_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112446790" style="skin_hotspotstyle" ath="-76.006" atv="2.277" depth="1000.0" linkedscene="scene_street_33" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112519386" style="skin_hotspotstyle" ath="-5.189" atv="4.276" depth="1000.0" linkedscene="scene_presidential_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112520227" style="skin_hotspotstyle" ath="-153.44" atv="4.762" depth="1000.0" linkedscene="scene_gypsy_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_32_1" title="Улица 30.1" onstart="update_street_radar(dot_scene_street_32_1, 0.0); show_street_map();" thumburl="panos/street/street_32_1.tiles/thumb.jpg" lat="51.24327778" lng="86.06377778" alt="401.10" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_32_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_32_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112446023" style="skin_hotspotstyle" ath="-156.512" atv="-2.353" depth="1000.0" linkedscene="scene_street_32" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_33" title="Улица 31" onstart="update_street_radar(dot_scene_street_33, 0.0); show_street_map();" thumburl="panos/street/street_33.tiles/thumb.jpg" lat="51.24305556" lng="86.06361111" alt="398.20" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_33.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_33.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112446688" style="skin_hotspotstyle" ath="111.647" atv="2.189" depth="1000.0" linkedscene="scene_street_32" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112464198" style="skin_hotspotstyle" ath="-91.469" atv="1.818" depth="1000.0" linkedscene="scene_street_34" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112516248" style="skin_hotspotstyle" ath="-51.225" atv="1.306" depth="1000.0" linkedscene="scene_cousteau_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112517677" style="skin_hotspotstyle" ath="-151.042" atv="5.767" depth="1000.0" linkedscene="scene_chevalier_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112518365" style="skin_hotspotstyle" ath="44.93" atv="2.898" depth="1000.0" linkedscene="scene_number2_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112518952" style="skin_hotspotstyle" ath="165.067" atv="2.845" depth="1000.0" linkedscene="scene_dacha_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_34" title="Улица 32" onstart="update_street_radar(dot_scene_street_34, 0.0); show_street_map();" thumburl="panos/street/street_34.tiles/thumb.jpg" lat="51.24250000" lng="86.06372222" alt="402.70" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_34.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_34.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112499708" style="skin_hotspotstyle" ath="143.087" atv="-1.884" depth="1000.0" linkedscene="scene_street_35" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112501520" style="skin_hotspotstyle" ath="79.142" atv="5.119" depth="1000.0" linkedscene="scene_street_33" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112501846" style="skin_hotspotstyle" ath="-87.297" atv="5.528" depth="1000.0" linkedscene="scene_street_34_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112512494" style="skin_hotspotstyle" ath="-44.516" atv="6.355" depth="1000.0" linkedscene="scene_kamchatka_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112513473" style="skin_hotspotstyle" ath="-107.422" atv="4.732" depth="1000.0" linkedscene="scene_narnia_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_34_1" title="Улица 32.1" onstart="update_street_radar(dot_scene_street_34_1, 0.0); show_street_map();" thumburl="panos/street/street_34_1.tiles/thumb.jpg" lat="51.24252778" lng="86.06375000" alt="399.30" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_34_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_34_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112501940" style="skin_hotspotstyle" ath="85.275" atv="4.164" depth="1000.0" linkedscene="scene_street_34" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112502292" style="skin_hotspotstyle" ath="-79.123" atv="3.995" depth="1000.0" linkedscene="scene_street_34_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112511793" style="skin_hotspotstyle" ath="-140.531" atv="-11.61" depth="1000.0" linkedscene="scene_belukha_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_34_2" title="Улица 32.2" onstart="update_street_radar(dot_scene_street_34_2, 0.0); show_street_map();" thumburl="panos/street/street_34_2.tiles/thumb.jpg" lat="51.24211111" lng="86.06372222" alt="400.10" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_34_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_34_2.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112502373" style="skin_hotspotstyle" ath="97.399" atv="4.354" depth="1000.0" linkedscene="scene_street_34_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112502551" style="skin_hotspotstyle" ath="-4.738" atv="10.943" depth="1000.0" linkedscene="scene_street_34_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112502876" style="skin_hotspotstyle" ath="-91.735" atv="10.416" depth="1000.0" linkedscene="scene_street_34_4" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_34_3" title="Улица 32.3" onstart="update_street_radar(dot_scene_street_34_3, 0.0); show_street_map();" thumburl="panos/street/street_34_3.tiles/thumb.jpg" lat="51.24236111" lng="86.06383333" alt="403.70" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_34_3.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_34_3.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112502664" style="skin_hotspotstyle" ath="171.724" atv="11.03" depth="1000.0" linkedscene="scene_street_34_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112508701" style="skin_hotspotstyle" ath="-55.371" atv="18.724" depth="1000.0" linkedscene="scene_zen_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112509472" style="skin_hotspotstyle" ath="53.26" atv="13.976" depth="1000.0" linkedscene="scene_hemingway_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_34_4" title="Улица 32.4" onstart="update_street_radar(dot_scene_street_34_4, 0.0); show_street_map();" thumburl="panos/street/street_34_4.tiles/thumb.jpg" lat="51.24211111" lng="86.06375000" alt="404.30" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_34_4.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_34_4.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112502996" style="skin_hotspotstyle" ath="71.198" atv="13.62" depth="1000.0" linkedscene="scene_street_34_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112503170" style="skin_hotspotstyle" ath="-121.183" atv="8.991" depth="1000.0" linkedscene="scene_street_34_5" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112507410" style="skin_hotspotstyle" ath="168.307" atv="9.944" depth="1000.0" linkedscene="scene_the_rabbit_hole_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_34_5" title="Улица 32.5" onstart="update_street_radar(dot_scene_street_34_5, 0.0); show_street_map();" thumburl="panos/street/street_34_5.tiles/thumb.jpg" lat="51.24216667" lng="86.06375000" alt="401.50" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_34_5.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_34_5.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112503240" style="skin_hotspotstyle" ath="88.221" atv="12.299" depth="1000.0" linkedscene="scene_street_34_4" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112503433" style="skin_hotspotstyle" ath="-95.109" atv="11.294" depth="1000.0" linkedscene="scene_street_34_6" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112506552" style="skin_hotspotstyle" ath="-11.893" atv="18.275" depth="1000.0" linkedscene="scene_piligrim_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_34_6" title="Дорожка к пляжу 1" onstart="update_street_radar(dot_scene_street_34_6, 0.0); show_street_map();" thumburl="panos/street/street_34_6.tiles/thumb.jpg" lat="51.24202778" lng="86.06372222" alt="400.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_34_6.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_34_6.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112503555" style="skin_hotspotstyle" ath="79.456" atv="8.254" depth="1000.0" linkedscene="scene_street_34_5" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112503668" style="skin_hotspotstyle" ath="-88.281" atv="7.811" depth="1000.0" linkedscene="scene_street_34_7" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_34_7" title="Дорожка к пляжу 2" onstart="update_street_radar(dot_scene_street_34_7, 0.0); show_street_map();" thumburl="panos/street/street_34_7.tiles/thumb.jpg" lat="51.24191667" lng="86.06377778" alt="401.90" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_34_7.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_34_7.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112503780" style="skin_hotspotstyle" ath="99.05" atv="6.587" depth="1000.0" linkedscene="scene_street_34_6" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112503992" style="skin_hotspotstyle" ath="2.973" atv="22.329" depth="1000.0" linkedscene="scene_street_34_8" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112504433" style="skin_hotspotstyle" ath="-75.731" atv="4.494" depth="1000.0" linkedscene="scene_street_34_9" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_34_8" title="Чаны" onstart="update_street_radar(dot_scene_street_34_8, 0.0); show_street_map();" thumburl="panos/street/street_34_8.tiles/thumb.jpg" lat="51.24180556" lng="86.06377778" alt="398.20" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_34_8.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_34_8.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112504080" style="skin_hotspotstyle" ath="167.729" atv="-3.698" depth="1000.0" linkedscene="scene_street_34_7" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_34_9" title="Дорожка к пляжу 3" onstart="update_street_radar(dot_scene_street_34_9, 0.0); show_street_map();" thumburl="panos/street/street_34_9.tiles/thumb.jpg" lat="51.24158333" lng="86.06377778" alt="403.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_34_9.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_34_9.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112504635" style="skin_hotspotstyle" ath="101.546" atv="3.314" depth="1000.0" linkedscene="scene_street_34_7" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112504964" style="skin_hotspotstyle" ath="-87.444" atv="2.35" depth="1000.0" linkedscene="scene_street_34_10" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_34_10" title="Дорожка к пляжу 4" onstart="update_street_radar(dot_scene_street_34_10, 0.0); show_street_map();" thumburl="panos/street/street_34_10.tiles/thumb.jpg" lat="51.24138889" lng="86.06380556" alt="398.50" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_34_10.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_34_10.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112505061" style="skin_hotspotstyle" ath="97.039" atv="3.087" depth="1000.0" linkedscene="scene_street_34_9" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112505257" style="skin_hotspotstyle" ath="-77.926" atv="5.455" depth="1000.0" linkedscene="scene_beach_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+		<scene name="scene_beach_1" title="Пляж 1" onstart="update_street_radar(dot_scene_beach_1, 0.0); show_street_map();" thumburl="panos/beach/beach_1.tiles/thumb.jpg" lat="51.24113889" lng="86.06375000" alt="396.90" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/beach/beach_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/beach/beach_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112505597" style="skin_hotspotstyle" ath="100.132" atv="-2.514" depth="1000.0" linkedscene="scene_street_34_10" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112505867" style="skin_hotspotstyle" ath="-96.648" atv="5.991" depth="1000.0" linkedscene="scene_beach_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_beach_2" title="Пляж 2" onstart="update_street_radar(dot_scene_beach_2, 0.0); show_street_map();" thumburl="panos/beach/beach_2.tiles/thumb.jpg" lat="51.24061111" lng="86.06383333" alt="397.20" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/beach/beach_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/beach/beach_2.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112505953" style="skin_hotspotstyle" ath="90.897" atv="6.874" depth="1000.0" linkedscene="scene_beach_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_35" title="Улица 33" onstart="update_street_radar(dot_scene_street_35, 0.0); show_street_map();" thumburl="panos/street/street_35.tiles/thumb.jpg" lat="51.24291667" lng="86.06405556" alt="400.60" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_35.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_35.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112499916" style="skin_hotspotstyle" ath="-79.72" atv="7.677" depth="1000.0" linkedscene="scene_street_34" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112500107" style="skin_hotspotstyle" ath="104.724" atv="-1.331" depth="1000.0" linkedscene="scene_street_36" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113071591" style="skin_hotspotstyle" ath="-143.683" atv="-8.552" depth="1000.0" linkedscene="scene_king_of_the_montain_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_36" title="Улица 34" onstart="update_street_radar(dot_scene_street_36, 0.0); show_street_map();" thumburl="panos/street/street_36.tiles/thumb.jpg" lat="51.24294444" lng="86.06425000" alt="405.60" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_36.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_36.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112499125" style="skin_hotspotstyle" ath="95.944" atv="4.603" depth="1000.0" linkedscene="scene_street_37" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112499252" style="skin_hotspotstyle" ath="-62.28" atv="9.561" depth="1000.0" linkedscene="scene_street_35" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_37" title="Улица 35" onstart="update_street_radar(dot_scene_street_37, 0.0); show_street_map();" thumburl="panos/street/street_37.tiles/thumb.jpg" lat="51.24302778" lng="86.06430556" alt="404.90" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_37.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_37.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112474628" style="skin_hotspotstyle" ath="91.292" atv="8.338" depth="1000.0" linkedscene="scene_street_38" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112498824" style="skin_hotspotstyle" ath="-79.329" atv="15.115" depth="1000.0" linkedscene="scene_street_36" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113073444" style="skin_hotspotstyle" ath="7.692" atv="7.616" depth="1000.0" linkedscene="scene_mobidic_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_38" title="Улица 36" onstart="update_street_radar(dot_scene_street_38, 0.0); show_street_map();" thumburl="panos/street/street_38.tiles/thumb.jpg" lat="51.24311111" lng="86.06438889" alt="403.20" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_38.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_38.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112474418" style="skin_hotspotstyle" ath="62.536" atv="7.946" depth="1000.0" linkedscene="scene_street_39" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112474520" style="skin_hotspotstyle" ath="-127.543" atv="7.139" depth="1000.0" linkedscene="scene_street_37" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113074141" style="skin_hotspotstyle" ath="-27.247" atv="8.01" depth="1000.0" linkedscene="scene_copernicus_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_39" title="Улица 37" onstart="update_street_radar(dot_scene_street_39, 0.0); show_street_map();" thumburl="panos/street/street_39.tiles/thumb.jpg" lat="51.24327778" lng="86.06447222" alt="404.20" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_39.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_39.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112474018" style="skin_hotspotstyle" ath="82.698" atv="5.508" depth="1000.0" linkedscene="scene_street_40" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112474315" style="skin_hotspotstyle" ath="-120.531" atv="7.942" depth="1000.0" linkedscene="scene_street_38" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113075095" style="skin_hotspotstyle" ath="-0.326" atv="7.228" depth="1000.0" linkedscene="scene_titov_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_40" title="Улица 38" onstart="update_street_radar(dot_scene_street_40, 0.0); show_street_map();" thumburl="panos/street/street_40.tiles/thumb.jpg" lat="51.24336111" lng="86.06447222" alt="404.20" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_40.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_40.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112473735" style="skin_hotspotstyle" ath="79.404" atv="3.843" depth="1000.0" linkedscene="scene_street_41" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112473906" style="skin_hotspotstyle" ath="-99.132" atv="5.07" depth="1000.0" linkedscene="scene_street_39" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113076096" style="skin_hotspotstyle" ath="-9.264" atv="6.381" depth="1000.0" linkedscene="scene_magellan_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_41" title="Улица 39" onstart="update_street_radar(dot_scene_street_41, 0.0); show_street_map();" thumburl="panos/street/street_41.tiles/thumb.jpg" lat="51.24386111" lng="86.06483333" alt="384.20" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_41.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_41.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112472035" style="skin_hotspotstyle" ath="79.567" atv="4.473" depth="1000.0" linkedscene="scene_street_42" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112473433" style="skin_hotspotstyle" ath="-18.652" atv="7.016" depth="1000.0" linkedscene="scene_street_41_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112473637" style="skin_hotspotstyle" ath="-93.571" atv="3.598" depth="1000.0" linkedscene="scene_street_40" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_41_1" title="Улица 39.1" onstart="update_street_radar(dot_scene_street_41_1, 0.0); show_street_map();" thumburl="panos/street/street_41_1.tiles/thumb.jpg" lat="51.24380556" lng="86.06472222" alt="389.50" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_41_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_41_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112473530" style="skin_hotspotstyle" ath="173.721" atv="4.63" depth="1000.0" linkedscene="scene_street_41" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113076734" style="skin_hotspotstyle" ath="-78.696" atv="4.871" depth="1000.0" linkedscene="scene_frida_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113077463" style="skin_hotspotstyle" ath="4.162" atv="8.668" depth="1000.0" linkedscene="scene_robin_christopher_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_street_42" title="Улица 40" onstart="update_street_radar(dot_scene_street_42, 0.0); show_street_map();" thumburl="panos/street/street_42.tiles/thumb.jpg" lat="51.24400000" lng="86.06486111" alt="394.10" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/street/street_42.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/street/street_42.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112416162" style="skin_hotspotstyle" ath="111.943" atv="17.749" depth="1000.0" linkedscene="scene_street_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112416557" style="skin_hotspotstyle" ath="14.083" atv="6.432" depth="1000.0" linkedscene="scene_street_25" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112418930" style="skin_hotspotstyle" ath="42.699" atv="7.528" depth="1000.0" linkedscene="scene_street_3_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112471901" style="skin_hotspotstyle" ath="-102.247" atv="4.076" depth="1000.0" linkedscene="scene_street_41" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112526265" style="skin_hotspotstyle" ath="-32.923" atv="6.802" depth="1000.0" linkedscene="scene_massage_room_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+</krpano>

@@ -1,0 +1,38 @@
+﻿<krpano>
+
+	<!-- Ангар -->
+
+	<scene name="scene_hangar_1" title="Ангар" onstart="" thumburl="panos/hangar/hangar_1.tiles/thumb.jpg" lat="51.24511111" lng="86.06513889" alt="404.10" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/hangar/hangar_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/hangar/hangar_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113080575" style="skin_hotspotstyle" ath="165.499" atv="22.679" depth="1000.0" linkedscene="scene_hangar_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113080797" style="skin_hotspotstyle" ath="-8.677" atv="10.625" depth="1000.0" linkedscene="scene_street_7" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_hangar_2" title="Досуговая" onstart="" thumburl="panos/hangar/hangar_2.tiles/thumb.jpg" lat="51.24505556" lng="86.06522222" alt="406.30" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/hangar/hangar_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/hangar/hangar_2.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113080656" style="skin_hotspotstyle" ath="10.973" atv="15.565" depth="1000.0" linkedscene="scene_hangar_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+</krpano>

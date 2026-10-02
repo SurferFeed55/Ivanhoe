@@ -1,0 +1,123 @@
+﻿<krpano>
+
+	<!-- Гранд Шале -->
+
+	<scene name="scene_grand_chalet_1" title="Гранд Шале" onstart="" thumburl="panos/grand_chalet/grand_chalet_1.tiles/thumb.jpg" lat="51.24586111" lng="86.06488889" alt="401.10" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/grand_chalet/grand_chalet_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/grand_chalet/grand_chalet_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113090776" style="skin_hotspotstyle" ath="-77.441" atv="10.788" depth="1000.0" linkedscene="scene_street_10" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113090963" style="skin_hotspotstyle" ath="-177.031" atv="42.089" depth="1000.0" linkedscene="scene_grand_chalet_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_grand_chalet_2" title="Холл" onstart="" thumburl="panos/grand_chalet/grand_chalet_2.tiles/thumb.jpg" lat="51.24605556" lng="86.06486111" alt="405.40" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/grand_chalet/grand_chalet_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/grand_chalet/grand_chalet_2.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113091066" style="skin_hotspotstyle" ath="-2.911" atv="39.596" depth="1000.0" linkedscene="scene_grand_chalet_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113091320" style="skin_hotspotstyle" ath="178.861" atv="15.408" depth="1000.0" linkedscene="scene_grand_chalet_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113092035" style="skin_hotspotstyle" ath="-128.069" atv="22.332" depth="1000.0" linkedscene="scene_grand_chalet_6" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_grand_chalet_3" title="Коридор" onstart="" thumburl="panos/grand_chalet/grand_chalet_3.tiles/thumb.jpg" lat="51.24602778" lng="86.06480556" alt="398.80" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/grand_chalet/grand_chalet_3.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/grand_chalet/grand_chalet_3.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113091395" style="skin_hotspotstyle" ath="0.194" atv="15.075" depth="1000.0" linkedscene="scene_grand_chalet_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113091571" style="skin_hotspotstyle" ath="24.708" atv="44.98" depth="1000.0" linkedscene="scene_grand_chalet_4" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113091770" style="skin_hotspotstyle" ath="-14.923" atv="34.439" depth="1000.0" linkedscene="scene_grand_chalet_5" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_grand_chalet_4" title="Санузел" onstart="" thumburl="panos/grand_chalet/grand_chalet_4.tiles/thumb.jpg" lat="51.24600000" lng="86.06483333" alt="399.50" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/grand_chalet/grand_chalet_4.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/grand_chalet/grand_chalet_4.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113091650" style="skin_hotspotstyle" ath="-97.324" atv="48.985" depth="1000.0" linkedscene="scene_grand_chalet_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_grand_chalet_5" title="Спальня 1" onstart="" thumburl="panos/grand_chalet/grand_chalet_5.tiles/thumb.jpg" lat="51.24600000" lng="86.06483333" alt="399.80" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/grand_chalet/grand_chalet_5.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/grand_chalet/grand_chalet_5.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113091860" style="skin_hotspotstyle" ath="43.231" atv="31.255" depth="1000.0" linkedscene="scene_grand_chalet_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_grand_chalet_6" title="2 Этаж" onstart="" thumburl="panos/grand_chalet/grand_chalet_6.tiles/thumb.jpg" lat="51.24600000" lng="86.06486111" alt="400.80" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/grand_chalet/grand_chalet_6.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/grand_chalet/grand_chalet_6.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113092130" style="skin_hotspotstyle" ath="-89.649" atv="55.695" depth="1000.0" linkedscene="scene_grand_chalet_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113092262" style="skin_hotspotstyle" ath="115.085" atv="52.625" depth="1000.0" linkedscene="scene_grand_chalet_7" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_grand_chalet_7" title="Спальня 2" onstart="" thumburl="panos/grand_chalet/grand_chalet_7.tiles/thumb.jpg" lat="51.24594444" lng="86.06483333" alt="395.40" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/grand_chalet/grand_chalet_7.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/grand_chalet/grand_chalet_7.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113092347" style="skin_hotspotstyle" ath="18.478" atv="28.927" depth="1000.0" linkedscene="scene_grand_chalet_6" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+</krpano>

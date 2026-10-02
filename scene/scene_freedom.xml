@@ -1,0 +1,72 @@
+﻿<krpano>
+
+	<!-- Свобода -->
+
+	<scene name="scene_freedom_01" title="Свобода" onstart="" thumburl="panos/freedom/freedom_01.tiles/thumb.jpg" lat="51.24525000" lng="86.06455556" alt="405.30" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/freedom/freedom_01.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/freedom/freedom_01.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113099027" style="skin_hotspotstyle" ath="88.873" atv="7.769" depth="1000.0" linkedscene="scene_street_7_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2114880495" style="skin_hotspotstyle" ath="-166.166" atv="43.693" depth="1000.0" linkedscene="scene_freedom_02" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+	
+	<scene name="scene_freedom_02" title="Комната" onstart="" thumburl="panos/vrungel/vrungel_02.tiles/thumb.jpg" lat="51.24572222" lng="86.06433333" alt="404.90" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/vrungel/vrungel_02.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/vrungel/vrungel_02.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113095668" style="skin_hotspotstyle" ath="1.778" atv="30.91" depth="1000.0" linkedscene="scene_freedom_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113095784" style="skin_hotspotstyle" ath="-139.92" atv="28.41" depth="1000.0" linkedscene="scene_freedom_03" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113096012" style="skin_hotspotstyle" ath="-175.086" atv="-41.522" depth="1000.0" linkedscene="scene_freedom_04" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_freedom_03" title="Санузел" onstart="" thumburl="panos/vrungel/vrungel_03.tiles/thumb.jpg" lat="51.24569444" lng="86.06430556" alt="401.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/vrungel/vrungel_03.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/vrungel/vrungel_03.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113095914" style="skin_hotspotstyle" ath="1.526" atv="62.738" depth="1000.0" linkedscene="scene_freedom_02" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_freedom_04" title="Спальня" onstart="" thumburl="panos/vrungel/vrungel_04.tiles/thumb.jpg" lat="51.24569444" lng="86.06427778" alt="397.80" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/vrungel/vrungel_04.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/vrungel/vrungel_04.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113096121" style="skin_hotspotstyle" ath="2.406" atv="62.07" depth="1000.0" linkedscene="scene_freedom_02" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+</krpano>

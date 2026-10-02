@@ -1,0 +1,55 @@
+﻿<krpano>
+	
+	<!-- Воздух -->
+
+	<scene name="scene_air_01" title="Воздух" onstart="" thumburl="panos/Air/air_01.tiles/thumb.jpg" lat="51.24494444" lng="86.06386111" alt="394.60" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Air/air_01.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Air/air_01.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112142786" style="skin_hotspotstyle" ath="48.408" atv="31.647" depth="1000.0" linkedscene="scene_air_02" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112143736" style="skin_hotspotstyle" ath="-133.011" atv="20.835" depth="1000.0" linkedscene="scene_street_19" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_air_02" title="Комната" onstart="" thumburl="panos/Air/air_02.tiles/thumb.jpg" lat="51.24500000" lng="86.06386111" alt="400.70" heading="0.0">
+			
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Air/air_02.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Air/air_02.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112142925" style="skin_hotspotstyle" ath="-144.504" atv="39.17" depth="1000.0" linkedscene="scene_air_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112143384" style="skin_hotspotstyle" ath="104.446" atv="60.576" depth="1000.0" linkedscene="scene_air_03" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_air_03" title="Санузел" onstart="" thumburl="panos/Air/air_03.tiles/thumb.jpg" lat="51.24497222" lng="86.06380556" alt="395.70" heading="0.0">
+			
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Air/air_03.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Air/air_03.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112143510" style="skin_hotspotstyle" ath="-51.626" atv="49.655" depth="1000.0" linkedscene="scene_air_02" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+</krpano>

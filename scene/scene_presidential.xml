@@ -1,0 +1,72 @@
+﻿<krpano>
+
+	<!-- Президентский -->
+
+	<scene name="scene_presidential_1" title="Президентский" onstart="" thumburl="panos/presidential/presidential_1.tiles/thumb.jpg" lat="51.24325000" lng="86.06369444" alt="399.10" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/presidential/presidential_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/presidential/presidential_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112519693" style="skin_hotspotstyle" ath="96.439" atv="28.833" depth="1000.0" linkedscene="scene_street_32" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2114883244" style="skin_hotspotstyle" ath="-174.724" atv="28.637" depth="1000.0" linkedscene="scene_presidential_2" linkedscene_hoffset="90.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_presidential_2" title="Спальня" onstart="" thumburl="panos/roerich/roerich_02.tiles/thumb.jpg" lat="51.24405556" lng="86.06386111" alt="403.80" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/roerich/roerich_02.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/roerich/roerich_02.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112523034" style="skin_hotspotstyle" ath="88.514" atv="37.296" depth="1000.0" linkedscene="scene_presidential_1" linkedscene_hoffset="-90.0" use3dtransition="true" />
+		<hotspot name="spot2112523164" style="skin_hotspotstyle" ath="-117.731" atv="19.284" depth="1000.0" linkedscene="scene_presidential_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112523373" style="skin_hotspotstyle" ath="-57.214" atv="17.8" depth="1000.0" linkedscene="scene_presidential_4" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_presidential_3" title="Санузел" onstart="" thumburl="panos/roerich/roerich_03.tiles/thumb.jpg" lat="51.24402778" lng="86.06383333" alt="406.60" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/roerich/roerich_03.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/roerich/roerich_03.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112523223" style="skin_hotspotstyle" ath="80.222" atv="20.774" depth="1000.0" linkedscene="scene_presidential_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_presidential_4" title="Гардероб" onstart="" thumburl="panos/roerich/roerich_04.tiles/thumb.jpg" lat="51.24405556" lng="86.06386111" alt="402.60" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/roerich/roerich_04.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/roerich/roerich_04.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112523483" style="skin_hotspotstyle" ath="103.108" atv="24.205" depth="1000.0" linkedscene="scene_presidential_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+</krpano>

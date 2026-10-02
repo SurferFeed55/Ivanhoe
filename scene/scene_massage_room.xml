@@ -1,0 +1,38 @@
+﻿<krpano>
+
+	<!-- Массажный кабинет -->
+
+	<scene name="scene_massage_room_2" title="Фойе" onstart="" thumburl="panos/massage_room/massage_room_2.tiles/thumb.jpg" lat="51.24391667" lng="86.06452778" alt="405.10" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/massage_room/massage_room_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/massage_room/massage_room_2.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112526597" style="skin_hotspotstyle" ath="-179.426" atv="34.521" depth="1000.0" linkedscene="scene_street_42" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112526887" style="skin_hotspotstyle" ath="18.819" atv="31.809" depth="1000.0" linkedscene="scene_massage_room_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_massage_room_3" title="Массажный Кабинет" onstart="" thumburl="panos/massage_room/massage_room_3.tiles/thumb.jpg" lat="51.24391667" lng="86.06452778" alt="407.90" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/massage_room/massage_room_3.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/massage_room/massage_room_3.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112526957" style="skin_hotspotstyle" ath="-106.555" atv="35.627" depth="1000.0" linkedscene="scene_massage_room_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+</krpano>

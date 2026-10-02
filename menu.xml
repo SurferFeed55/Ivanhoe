@@ -1,0 +1,930 @@
+<krpano>
+
+    <!-- ============================================================ -->
+    <!-- СКРЫТИЕ БАЗОВОГО UI KRPANO + СТАРТ                            -->
+    <!-- ============================================================ -->
+    <action name="ui_hide_default" autorun="onstart">
+        set(skin_settings.thumbs,         false);
+        set(skin_settings.thumbs_opened,  false);
+        set(skin_settings.thumbs_text,    false);
+        set(skin_settings.title,          false);
+        set(skin_settings.autotour,       false);
+        set(skin_settings.controlbar_overlap, 0);
+    </action>
+
+    <events name="ui_events" keep="true"
+        onxmlcomplete="ui_apply_startup();"
+        onresize="topmenu_update_layout();"/>
+
+    <action name="ui_apply_startup">
+        <!-- Скрыть базовые слои скина -->
+        set(layer[skin_layer].visible,            false);
+        set(layer[skin_btn_thumbs].visible,       false);
+        set(layer[skin_btn_prev].visible,         false);
+        set(layer[skin_btn_next].visible,         false);
+        set(layer[skin_btn_prev_fs].visible,      false);
+        set(layer[skin_btn_next_fs].visible,      false);
+        set(layer[skin_btn_hide].visible,         false);
+        set(layer[skin_btn_show].visible,         false);
+        set(layer[skin_scroll_window].visible,    false);
+        set(layer[skin_splitter_bottom].visible,  false);
+        set(layer[skin_control_bar].visible,      false);
+
+        <!-- Логотип -->
+        if(layer[skin_logo_name],
+            set(layer[skin_logo_name].enabled,   true);
+            set(layer[skin_logo_name].bgcapture, true);
+            set(layer[skin_logo_name].zorder,    150);
+            set(layer[skin_logo_name].x,         10);
+            set(layer[skin_logo_name].y,         5);
+            set(layer[skin_logo_name].scale,     0.30);
+            set(layer[skin_logo_name].onclick,   topmenu_logo_click(););
+            set(layer[skin_logo_name].visible,   true);
+        );
+
+        topmenu_update_layout();
+        pano_browser_init_late();
+        update_zoom_indicator();
+    </action>
+
+    <action name="topmenu_logo_click">
+        topmenu_goto('scene_street_1');
+    </action>
+
+    <!-- ============================================================ -->
+    <!-- ОБЩИЕ СТИЛИ (ТЁМНАЯ ГАММА)                                    -->
+    <!-- ============================================================ -->
+    <style name="tm_btn"
+           type="text"
+           bgcolor="0xF5B400"
+           bgalpha="0.0"
+           bgroundedge="4"
+           css="color:#FFFFFF; font-family:Arial; font-size:14px; font-weight:bold; text-align:center;"
+           vcenter="true"
+           bgcapture="true"
+           onover="tween(bgalpha, 0.85, 0.15); set(css, 'color:#1A2320; font-family:Arial; font-size:14px; font-weight:bold; text-align:center;');"
+           onout="tween(bgalpha, 0.0, 0.15); set(css, 'color:#FFFFFF; font-family:Arial; font-size:14px; font-weight:bold; text-align:center;');"
+           />
+
+    <style name="tm_item"
+           type="text"
+           bgcolor="0xF5B400"
+           bgalpha="0.0"
+           css="color:#F2EFE9; font-family:Arial; font-size:14px; text-align:left;"
+           vcenter="true"
+           bgcapture="true"
+           padding="0 16"
+           onover="tween(bgalpha, 0.20, 0.1); set(css, 'color:#FFFFFF; font-family:Arial; font-size:14px; text-align:left;');"
+           onout="tween(bgalpha, 0.0, 0.1); set(css, 'color:#F2EFE9; font-family:Arial; font-size:14px; text-align:left;');"
+           />
+
+    <style name="tm_dd"
+           type="container"
+           visible="false"
+           alpha="0"
+           align="lefttop"
+           y="70"
+           width="230"
+           bgcolor="0x1A2320"
+           bgalpha="0.97"
+           bgborder="1 0x3A4A45 1"
+           bgroundedge="4"
+           bgshadow="0 8 24 0x000000 0.55"
+           keep="true"
+           zorder="110"
+           />
+
+    <style name="tm_round_btn"
+           type="text"
+           width="52" height="52"
+           bgcolor="0xF5B400"
+           bgalpha="0.92"
+           bgborder="1 0xFFFFFF 0.3"
+           bgroundedge="26"
+           bgshadow="0 3 10 0x000000 0.5"
+           css="color:#1A2320; font-family:Arial; font-size:24px; font-weight:bold; text-align:center;"
+           vcenter="true"
+           bgcapture="true"
+           onover="tween(bgalpha, 1.0, 0.15); tween(scale, 1.08, 0.12);"
+           onout="tween(bgalpha, 0.92, 0.15); tween(scale, 1.0, 0.12);"
+           />
+
+    <style name="tm_panel"
+           type="container"
+           bgcolor="0x1A2320"
+           bgalpha="0.97"
+           bgborder="1 0x3A4A45 1"
+           bgroundedge="8"
+           bgshadow="0 6 20 0x000000 0.55"
+           />
+
+    <!-- ============================================================ -->
+    <!-- DESKTOP TOP MENU                                              -->
+    <!-- ============================================================ -->
+    <layer name="topmenu_click_catcher"
+           type="container"
+           align="lefttop" x="0" y="0"
+           width="100%" height="100%"
+           bgalpha="0"
+           bgcapture="true"
+           enabled="true"
+           visible="false"
+           zorder="99"
+           onclick="topmenu_close_all();"
+           />
+
+    <layer name="top_menu_bar"
+           type="container"
+           align="top"
+           width="100%"
+           height="50"
+           bgcolor="0x1A2320"
+           bgalpha="0.94"
+           keep="true"
+           zorder="100"
+           bgcapture="false">
+
+        <layer name="top_menu_group"
+               type="container"
+               align="center"
+               width="790"
+               height="40">
+
+            <layer name="tm_btn_air"       style="tm_btn" align="left" edge="left" x="0"   width="110" height="40" html="Барнхаус"     onclick="topmenu_toggle('air');" />
+            <layer name="tm_btn_af_small"  style="tm_btn" align="left" edge="left" x="115" width="110" height="40" html="AF-малый"     onclick="topmenu_toggle('af_small');" />
+            <layer name="tm_btn_af_medium" style="tm_btn" align="left" edge="left" x="230" width="130" height="40" html="AF-средний"   onclick="topmenu_toggle('af_medium');" />
+            <layer name="tm_btn_af_large"  style="tm_btn" align="left" edge="left" x="365" width="130" height="40" html="AF-большой"   onclick="topmenu_toggle('af_large');" />
+            <layer name="tm_btn_tents"     style="tm_btn" align="left" edge="left" x="500" width="100" height="40" html="Шатры"        onclick="topmenu_toggle('tents');" />
+            <layer name="tm_btn_public"    style="tm_btn" align="left" edge="left" x="605" width="150" height="40" html="Общественные" onclick="topmenu_toggle('public');" />
+
+            <layer name="topmenu_dd_air" style="tm_dd" x="0" height="72">
+                <layer name="tmi_air_1" style="tm_item" align="lefttop" x="0" y="2"  width="230" height="32" html="Воздух" onclick="topmenu_goto('scene_air_01');" />
+                <layer name="tmi_air_2" style="tm_item" align="lefttop" x="0" y="36" width="230" height="32" html="Ветер"  onclick="topmenu_goto('scene_wing_1');" />
+            </layer>
+
+            <layer name="topmenu_dd_af_small" style="tm_dd" x="100" height="106">
+                <layer name="tmi_afs_1" style="tm_item" align="lefttop" x="0" y="2"  width="230" height="32" html="Фокс"      onclick="topmenu_goto('scene_fox_1');" />
+                <layer name="tmi_afs_2" style="tm_item" align="lefttop" x="0" y="36" width="230" height="32" html="Пикман"    onclick="topmenu_goto('scene_pickman');" />
+                <layer name="tmi_afs_3" style="tm_item" align="lefttop" x="0" y="70" width="230" height="32" html="Том Сойер" onclick="topmenu_goto('scene_tom_sawyer_01');" />
+            </layer>
+
+            <layer name="topmenu_dd_af_medium" style="tm_dd" x="230" height="444">
+                <layer name="tmi_afm_1"  style="tm_item" align="lefttop" x="0" y="2"   width="230" height="32" html="Андерсон"        onclick="topmenu_goto('scene_anderson_1');" />
+                <layer name="tmi_afm_2"  style="tm_item" align="lefttop" x="0" y="36"   width="230" height="32" html="Шагал"        onclick="topmenu_goto('scene_chagall_01');" />
+                <layer name="tmi_afm_3"  style="tm_item" align="lefttop" x="0" y="70"  width="230" height="32" html="Дягилев"         onclick="topmenu_goto('scene_diaghilev_1');" />
+                <layer name="tmi_afm_4"  style="tm_item" align="lefttop" x="0" y="104"  width="230" height="32" html="Свобода"         onclick="topmenu_goto('scene_freedom_01');" />
+                <layer name="tmi_afm_5"  style="tm_item" align="lefttop" x="0" y="138" width="230" height="32" html="Фрида"           onclick="topmenu_goto('scene_frida_1');" />
+                <layer name="tmi_afm_6"  style="tm_item" align="lefttop" x="0" y="172" width="230" height="32" html="Магеллан"        onclick="topmenu_goto('scene_magellan_1');" />
+                <layer name="tmi_afm_7"  style="tm_item" align="lefttop" x="0" y="206" width="230" height="32" html="Норка"           onclick="topmenu_goto('scene_mink_1');" />
+                <layer name="tmi_afm_8"  style="tm_item" align="lefttop" x="0" y="240" width="230" height="32" html="Мюнхаузен"       onclick="topmenu_goto('scene_munchausen_1');" />
+                <layer name="tmi_afm_9"  style="tm_item" align="lefttop" x="0" y="274" width="230" height="32" html="Паспарту"        onclick="topmenu_goto('scene_passepartout_1');" />
+                <layer name="tmi_afm_10"  style="tm_item" align="lefttop" x="0" y="308" width="230" height="32" html="Кристофер Робин" onclick="topmenu_goto('scene_robin_christopher_1');" />
+                <layer name="tmi_afm_11" style="tm_item" align="lefttop" x="0" y="342" width="230" height="32" html="Спутник"         onclick="topmenu_goto('scene_satellite_1');" />
+                <layer name="tmi_afm_12" style="tm_item" align="lefttop" x="0" y="376" width="230" height="32" html="Скрябин"         onclick="topmenu_goto('scene_scriabin_01');" />
+                <layer name="tmi_afm_13" style="tm_item" align="lefttop" x="0" y="410" width="230" height="32" html="Шукшин"          onclick="topmenu_goto('scene_shukshin_1');" />
+                <layer name="tmi_afm_14" style="tm_item" align="lefttop" x="0" y="444" width="230" height="32" html="Врунгель"        onclick="topmenu_goto('scene_vrungel_01');" />
+            </layer>
+
+            <layer name="topmenu_dd_af_large" style="tm_dd" x="360" height="106">
+                <layer name="tmi_afl_1" style="tm_item" align="lefttop" x="0" y="2"  width="230" height="32" html="Гранд Шале" onclick="topmenu_goto('scene_grand_chalet_1');" />
+                <layer name="tmi_afl_2" style="tm_item" align="lefttop" x="0" y="36" width="230" height="32" html="К2"         onclick="topmenu_goto('scene_k2_1');" />
+                <layer name="tmi_afl_3" style="tm_item" align="lefttop" x="0" y="70" width="230" height="32" html="Сибирь"    onclick="topmenu_goto('scene_sibiria_1');" />
+            </layer>
+
+            <layer name="topmenu_dd_tents" style="tm_dd" x="450" height="650">
+                <layer name="tmi_t_1"  style="tm_item" align="lefttop" x="0" y="2"   width="230" height="32" html="Белуха"         onclick="topmenu_goto('scene_belukha_01');" />
+                <layer name="tmi_t_2"  style="tm_item" align="lefttop" x="0" y="36"  width="230" height="32" html="Шевалье"        onclick="topmenu_goto('scene_chevalier_01');" />
+                <layer name="tmi_t_3"  style="tm_item" align="lefttop" x="0" y="70"  width="230" height="32" html="Коперник"       onclick="topmenu_goto('scene_copernicus_1');" />
+                <layer name="tmi_t_4"  style="tm_item" align="lefttop" x="0" y="104" width="230" height="32" html="Кусто"          onclick="topmenu_goto('scene_cousteau_01');" />
+                <layer name="tmi_t_5"  style="tm_item" align="lefttop" x="0" y="138" width="230" height="32" html="Дача"           onclick="topmenu_goto('scene_dacha_1');" />
+                <layer name="tmi_t_6"  style="tm_item" align="lefttop" x="0" y="172" width="230" height="32" html="Дебюсси"        onclick="topmenu_goto('scene_debussy_1');" />
+                <layer name="tmi_t_7"  style="tm_item" align="lefttop" x="0" y="206" width="230" height="32" html="Джипси"         onclick="topmenu_goto('scene_gypsy_1');" />
+                <layer name="tmi_t_8"  style="tm_item" align="lefttop" x="0" y="240" width="230" height="32" html="Хемингуэй"      onclick="topmenu_goto('scene_hemingway_01');" />
+                <layer name="tmi_t_9"  style="tm_item" align="lefttop" x="0" y="274" width="230" height="32" html="Камчатка"       onclick="topmenu_goto('scene_kamchatka_01');" />
+                <layer name="tmi_t_10" style="tm_item" align="lefttop" x="0" y="308" width="230" height="32" html="Король горы"    onclick="topmenu_goto('scene_king_of_the_montain_1');" />
+                <layer name="tmi_t_11" style="tm_item" align="lefttop" x="0" y="342" width="230" height="32" html="Мобидик"        onclick="topmenu_goto('scene_mobidic_1');" />
+                <layer name="tmi_t_12" style="tm_item" align="lefttop" x="0" y="376" width="230" height="32" html="Нарния"         onclick="topmenu_goto('scene_narnia_1');" />
+                <layer name="tmi_t_13" style="tm_item" align="lefttop" x="0" y="410" width="230" height="32" html="Номер 2"        onclick="topmenu_goto('scene_number2_1');" />
+                <layer name="tmi_t_14" style="tm_item" align="lefttop" x="0" y="444" width="230" height="32" html="Пилигрим"       onclick="topmenu_goto('scene_piligrim_1');" />
+                <layer name="tmi_t_15" style="tm_item" align="lefttop" x="0" y="478" width="230" height="32" html="Президентский"  onclick="topmenu_goto('scene_presidential_1');" />
+                <layer name="tmi_t_16" style="tm_item" align="lefttop" x="0" y="512" width="230" height="32" html="Рерих"          onclick="topmenu_goto('scene_roerich_01');" />
+                <layer name="tmi_t_17" style="tm_item" align="lefttop" x="0" y="546" width="230" height="32" html="Кроличья нора"  onclick="topmenu_goto('scene_the_rabbit_hole_1');" />
+                <layer name="tmi_t_18" style="tm_item" align="lefttop" x="0" y="580" width="230" height="32" html="Титов"          onclick="topmenu_goto('scene_titov_01');" />
+                <layer name="tmi_t_19" style="tm_item" align="lefttop" x="0" y="614" width="230" height="32" html="Дзен"           onclick="topmenu_goto('scene_zen_1');" />
+            </layer>
+
+            <layer name="topmenu_dd_public" style="tm_dd" x="525" height="242">
+                <layer name="tmi_p_1" style="tm_item" align="lefttop" x="0" y="2"   width="230" height="32" html="Большая Баня"      onclick="topmenu_goto('scene_bathhouseb_1');" />
+                <layer name="tmi_p_2" style="tm_item" align="lefttop" x="0" y="36"  width="230" height="32" html="Маленькая Баня"    onclick="topmenu_goto('scene_bathhousel_1');" />
+                <layer name="tmi_p_3" style="tm_item" align="lefttop" x="0" y="70"  width="230" height="32" html="Средняя Баня"      onclick="topmenu_goto('scene_bathhousem_01');" />
+                <layer name="tmi_p_4" style="tm_item" align="lefttop" x="0" y="104" width="230" height="32" html="Ангар"             onclick="topmenu_goto('scene_hangar_1');" />
+                <layer name="tmi_p_5" style="tm_item" align="lefttop" x="0" y="138" width="230" height="32" html="Массажный Кабинет" onclick="topmenu_goto('scene_massage_room_2');" />
+                <layer name="tmi_p_6" style="tm_item" align="lefttop" x="0" y="172" width="230" height="32" html="Ресепшн"           onclick="topmenu_goto('scene_reception_1');" />
+                <layer name="tmi_p_7" style="tm_item" align="lefttop" x="0" y="206" width="230" height="32" html="Ресторан"          onclick="topmenu_goto('scene_restaurant_1');" />
+            </layer>
+
+        </layer>
+    </layer>
+
+    <!-- ============================================================ -->
+    <!-- MOBILE MENU — кнопка в общем тёмном стиле (без яркого золота) -->
+    <!-- ============================================================ -->
+    <layer name="top_menu_mobile_btn"
+            type="text"
+            align="righttop" x="8" y="8"
+            width="112" height="34"
+            bgcolor="0x1A2320"
+            bgalpha="0.95"
+            bgborder="1 0xF5B400 0.85"
+            bgroundedge="17"
+            bgshadow="0 4 14 0x000000 0.55"
+            css="color:#F5B400; font-family:Arial; font-size:12px; font-weight:bold; text-align:center;"
+            vcenter="true"
+            html="☰  Помещения"
+            keep="true"
+            visible="false"
+            zorder="150"
+            bgcapture="true"
+            onover="tween(bgalpha, 1.0, 0.12); set(css, 'color:#FFFFFF; font-family:Arial; font-size:12px; font-weight:bold; text-align:center;');"
+            onout="tween(bgalpha, 0.95, 0.12); set(css, 'color:#F5B400; font-family:Arial; font-size:12px; font-weight:bold; text-align:center;');"
+            onclick="topmenu_mobile_open();"
+            />
+
+    <layer name="top_menu_mobile_panel"
+           type="container"
+           align="lefttop" x="0" y="0"
+           width="100%" height="100%"
+           bgcolor="0x000000"
+           bgalpha="0.7"
+           visible="false"
+           alpha="0"
+           keep="true"
+           zorder="200"
+           bgcapture="true"
+           onclick="topmenu_mobile_close();"
+           >
+
+        <layer name="tmm_card"
+               type="container"
+               align="lefttop"
+               x="6%" y="6%"
+               width="88%" height="88%"
+               bgcolor="0x1A2320"
+               bgalpha="1"
+               bgborder="1 0x3A4A45 1"
+               bgroundedge="12"
+               bgshadow="0 12 40 0x000000 0.65"
+               bgcapture="true"
+               maskchildren="true"
+               onclick="topmenu_mobile_noop();"
+               onloaded="topmenu_mobile_fit();"
+               >
+
+            <layer name="tmm_header"
+                   type="container"
+                   align="lefttop" x="0" y="0"
+                   width="100%" height="50"
+                   bgcolor="0xF5B400"
+                   bgalpha="1"
+                   bgcapture="false"
+                   zorder="10">
+
+                <layer name="tmm_back"
+                       type="text"
+                       align="left" edge="left"
+                       x="6" y="0"
+                       width="44" height="50"
+                       bgalpha="0.0"
+                       css="color:#1A2320; font-family:Arial; font-size:20px; font-weight:bold; text-align:center;"
+                       vcenter="true"
+                       bgcapture="true"
+                       html="←"
+                       visible="false"
+                       zorder="15"
+                       onclick="topmenu_mobile_back();"
+                       />
+
+                <layer name="tmm_title"
+                       type="text"
+                       align="left" edge="left"
+                       x="54" y="0"
+                       width="calc:100% - 116"
+                       height="50"
+                       css="color:#1A2320; font-family:Arial; font-size:15px; font-weight:bold; text-align:left;"
+                       vcenter="true"
+                       html="Помещения"
+                       zorder="15"
+                       enabled="false" />
+            </layer>
+
+            <layer name="tmm_close"
+                   type="text"
+                   align="righttop" x="8" y="8"
+                   width="38" height="34"
+                   bgcolor="0x1A2320"
+                   bgalpha="0.22"
+                   bgroundedge="6"
+                   css="color:#1A2320; font-family:Arial; font-size:18px; font-weight:bold; text-align:center;"
+                   vcenter="true"
+                   bgcapture="true"
+                   html="✕"
+                   zorder="20"
+                   onclick="topmenu_mobile_close();"
+                   />
+
+            <layer name="tmm_vp1"
+                   type="container"
+                   align="lefttop" x="0" y="50"
+                   width="100%" height="400"
+                   bgcolor="0x000000" bgalpha="0.0"
+                   maskchildren="true"
+                   bgcapture="false"
+                   zorder="5">
+
+                <layer name="tmm_lvl1"
+                       type="scrollarea"
+                       align="lefttop" x="0" y="0"
+                       width="100%" height="376"
+                       direction="v"
+                       visible="true"
+                       maskchildren="true"
+                       bounce="false"
+                       friction="0.9"
+                       momentum="0.5">
+
+                    <layer name="tmm_c_air"       style="tmm_cat_btn" align="lefttop" x="0" y="0"   html="Барнхаус"           onclick="topmenu_mobile_cat('air');" />
+                    <layer name="tmm_c_af_small"  style="tmm_cat_btn" align="lefttop" x="0" y="56"  html="A-Frame малый"      onclick="topmenu_mobile_cat('af_small');" />
+                    <layer name="tmm_c_af_medium" style="tmm_cat_btn" align="lefttop" x="0" y="112" html="A-Frame средний"    onclick="topmenu_mobile_cat('af_medium');" />
+                    <layer name="tmm_c_af_large"  style="tmm_cat_btn" align="lefttop" x="0" y="168" html="A-Frame большой"    onclick="topmenu_mobile_cat('af_large');" />
+                    <layer name="tmm_c_tents"     style="tmm_cat_btn" align="lefttop" x="0" y="224" html="Шатры"              onclick="topmenu_mobile_cat('tents');" />
+                    <layer name="tmm_c_public"    style="tmm_cat_btn" align="lefttop" x="0" y="280" html="Общественные места" onclick="topmenu_mobile_cat('public');" />
+                </layer>
+            </layer>
+
+            <layer name="tmm_vp2_air" type="container" align="lefttop" x="0" y="50" width="100%" height="400" bgcolor="0x000000" bgalpha="0.0" maskchildren="true" bgcapture="false" zorder="5">
+                <layer name="tmm_lvl2_air" type="scrollarea" align="lefttop" x="0" y="0" width="100%" height="96" direction="v" visible="false" maskchildren="true" bounce="false" friction="0.9" momentum="0.5">
+                    <layer name="tmm_i_air_1" style="tmm_item" align="lefttop" x="0" y="4"  html="Воздух" onclick="topmenu_mobile_goto('scene_air_01');" />
+                    <layer name="tmm_i_air_2" style="tmm_item" align="lefttop" x="0" y="48" html="Ветер"  onclick="topmenu_mobile_goto('scene_wing_1');" />
+                </layer>
+            </layer>
+
+            <layer name="tmm_vp2_af_small" type="container" align="lefttop" x="0" y="50" width="100%" height="400" bgcolor="0x000000" bgalpha="0.0" maskchildren="true" bgcapture="false" zorder="5">
+                <layer name="tmm_lvl2_af_small" type="scrollarea" align="lefttop" x="0" y="0" width="100%" height="132" direction="v" visible="false" maskchildren="true" bounce="false" friction="0.9" momentum="0.5">
+                    <layer name="tmm_i_afs_1" style="tmm_item" align="lefttop" x="0" y="4"   html="Фокс"      onclick="topmenu_mobile_goto('scene_fox_1');" />
+                    <layer name="tmm_i_afs_2" style="tmm_item" align="lefttop" x="0" y="48"  html="Пикман"    onclick="topmenu_mobile_goto('scene_pickman');" />
+                    <layer name="tmm_i_afs_3" style="tmm_item" align="lefttop" x="0" y="92"  html="Том Сойер" onclick="topmenu_mobile_goto('scene_tom_sawyer_01');" />
+                </layer>
+            </layer>
+
+            <layer name="tmm_vp2_af_medium" type="container" align="lefttop" x="0" y="50" width="100%" height="400" bgcolor="0x000000" bgalpha="0.0" maskchildren="true" bgcapture="false" zorder="5">
+                <layer name="tmm_lvl2_af_medium" type="scrollarea" align="lefttop" x="0" y="0" width="100%" height="620" direction="v" visible="false" maskchildren="true" bounce="false" friction="0.9" momentum="0.5">
+                    <layer name="tmm_i_afm_1"  style="tmm_item" align="lefttop" x="0" y="4"    html="Андерсон"        onclick="topmenu_mobile_goto('scene_anderson_1');" />
+                    <layer name="tmm_i_afm_2"  style="tmm_item" align="lefttop" x="0" y="48"    html="Шагал"        onclick="topmenu_mobile_goto('scene_chagall_01');" />
+                    <layer name="tmm_i_afm_3"  style="tmm_item" align="lefttop" x="0" y="92"   html="Дягилев"         onclick="topmenu_mobile_goto('scene_diaghilev_1');" />
+                    <layer name="tmm_i_afm_4"  style="tmm_item" align="lefttop" x="0" y="136"   html="Свобода"         onclick="topmenu_mobile_goto('scene_freedom_01');" />
+                    <layer name="tmm_i_afm_5"  style="tmm_item" align="lefttop" x="0" y="180"  html="Фрида"           onclick="topmenu_mobile_goto('scene_frida_1');" />
+                    <layer name="tmm_i_afm_6"  style="tmm_item" align="lefttop" x="0" y="224"  html="Магеллан"        onclick="topmenu_mobile_goto('scene_magellan_1');" />
+                    <layer name="tmm_i_afm_7"  style="tmm_item" align="lefttop" x="0" y="268"  html="Норка"           onclick="topmenu_mobile_goto('scene_mink_1');" />
+                    <layer name="tmm_i_afm_8"  style="tmm_item" align="lefttop" x="0" y="312"  html="Мюнхаузен"       onclick="topmenu_mobile_goto('scene_munchausen_1');" />
+                    <layer name="tmm_i_afm_9"  style="tmm_item" align="lefttop" x="0" y="356"  html="Паспарту"        onclick="topmenu_mobile_goto('scene_passepartout_1');" />
+                    <layer name="tmm_i_afm_10"  style="tmm_item" align="lefttop" x="0" y="400"  html="Кристофер Робин" onclick="topmenu_mobile_goto('scene_robin_christopher_1');" />
+                    <layer name="tmm_i_afm_11" style="tmm_item" align="lefttop" x="0" y="444"  html="Спутник"         onclick="topmenu_mobile_goto('scene_satellite_1');" />
+                    <layer name="tmm_i_afm_12" style="tmm_item" align="lefttop" x="0" y="488"  html="Скрябин"         onclick="topmenu_mobile_goto('scene_scriabin_01');" />
+                    <layer name="tmm_i_afm_13" style="tmm_item" align="lefttop" x="0" y="532"  html="Шукшин"          onclick="topmenu_mobile_goto('scene_shukshin_1');" />
+                    <layer name="tmm_i_afm_14" style="tmm_item" align="lefttop" x="0" y="576"  html="Врунгель"        onclick="topmenu_mobile_goto('scene_vrungel_01');" />
+                </layer>
+            </layer>
+
+            <layer name="tmm_vp2_af_large" type="container" align="lefttop" x="0" y="50" width="100%" height="400" bgcolor="0x000000" bgalpha="0.0" maskchildren="true" bgcapture="false" zorder="5">
+                <layer name="tmm_lvl2_af_large" type="scrollarea" align="lefttop" x="0" y="0" width="100%" height="132" direction="v" visible="false" maskchildren="true" bounce="false" friction="0.9" momentum="0.5">
+                    <layer name="tmm_i_afl_1" style="tmm_item" align="lefttop" x="0" y="4"   html="Гранд Шале" onclick="topmenu_mobile_goto('scene_grand_chalet_1');" />
+                    <layer name="tmm_i_afl_2" style="tmm_item" align="lefttop" x="0" y="48"  html="К2"         onclick="topmenu_mobile_goto('scene_k2_1');" />
+                    <layer name="tmm_i_afl_3" style="tmm_item" align="lefttop" x="0" y="92"  html="Сибирь"    onclick="topmenu_mobile_goto('scene_sibiria_1');" />
+                </layer>
+            </layer>
+
+            <layer name="tmm_vp2_tents" type="container" align="lefttop" x="0" y="50" width="100%" height="400" bgcolor="0x000000" bgalpha="0.0" maskchildren="true" bgcapture="false" zorder="5">
+                <layer name="tmm_lvl2_tents" type="scrollarea" align="lefttop" x="0" y="0" width="100%" height="900" direction="v" visible="false" maskchildren="true" bounce="false" friction="0.9" momentum="0.5">
+                    <layer name="tmm_i_t_1"  style="tmm_item" align="lefttop" x="0" y="4"    html="Белуха"          onclick="topmenu_mobile_goto('scene_belukha_01');" />
+                    <layer name="tmm_i_t_2"  style="tmm_item" align="lefttop" x="0" y="48"   html="Шевалье"         onclick="topmenu_mobile_goto('scene_chevalier_01');" />
+                    <layer name="tmm_i_t_3"  style="tmm_item" align="lefttop" x="0" y="92"   html="Коперник"        onclick="topmenu_mobile_goto('scene_copernicus_1');" />
+                    <layer name="tmm_i_t_4"  style="tmm_item" align="lefttop" x="0" y="136"  html="Кусто"           onclick="topmenu_mobile_goto('scene_cousteau_01');" />
+                    <layer name="tmm_i_t_5"  style="tmm_item" align="lefttop" x="0" y="180"  html="Дача"            onclick="topmenu_mobile_goto('scene_dacha_1');" />
+                    <layer name="tmm_i_t_6"  style="tmm_item" align="lefttop" x="0" y="224"  html="Дебюсси"         onclick="topmenu_mobile_goto('scene_debussy_1');" />
+                    <layer name="tmm_i_t_7"  style="tmm_item" align="lefttop" x="0" y="268"  html="Джипси"          onclick="topmenu_mobile_goto('scene_gypsy_1');" />
+                    <layer name="tmm_i_t_8"  style="tmm_item" align="lefttop" x="0" y="312"  html="Хемингуэй"       onclick="topmenu_mobile_goto('scene_hemingway_01');" />
+                    <layer name="tmm_i_t_9"  style="tmm_item" align="lefttop" x="0" y="356"  html="Камчатка"        onclick="topmenu_mobile_goto('scene_kamchatka_01');" />
+                    <layer name="tmm_i_t_10" style="tmm_item" align="lefttop" x="0" y="400"  html="Король горы"     onclick="topmenu_mobile_goto('scene_king_of_the_montain_1');" />
+                    <layer name="tmm_i_t_11" style="tmm_item" align="lefttop" x="0" y="444"  html="Мобидик"         onclick="topmenu_mobile_goto('scene_mobidic_1');" />
+                    <layer name="tmm_i_t_12" style="tmm_item" align="lefttop" x="0" y="488"  html="Нарния"          onclick="topmenu_mobile_goto('scene_narnia_1');" />
+                    <layer name="tmm_i_t_13" style="tmm_item" align="lefttop" x="0" y="532"  html="Номер 2"         onclick="topmenu_mobile_goto('scene_number2_1');" />
+                    <layer name="tmm_i_t_14" style="tmm_item" align="lefttop" x="0" y="576"  html="Пилигрим"        onclick="topmenu_mobile_goto('scene_piligrim_1');" />
+                    <layer name="tmm_i_t_15" style="tmm_item" align="lefttop" x="0" y="620"  html="Президентский"   onclick="topmenu_mobile_goto('scene_presidential_1');" />
+                    <layer name="tmm_i_t_16" style="tmm_item" align="lefttop" x="0" y="664"  html="Рерих"           onclick="topmenu_mobile_goto('scene_roerich_01');" />
+                    <layer name="tmm_i_t_17" style="tmm_item" align="lefttop" x="0" y="708"  html="Кроличья нора"   onclick="topmenu_mobile_goto('scene_the_rabbit_hole_1');" />
+                    <layer name="tmm_i_t_18" style="tmm_item" align="lefttop" x="0" y="752"  html="Титов"           onclick="topmenu_mobile_goto('scene_titov_01');" />
+                    <layer name="tmm_i_t_19" style="tmm_item" align="lefttop" x="0" y="796"  html="Дзен"            onclick="topmenu_mobile_goto('scene_zen_1');" />
+                </layer>
+            </layer>
+
+            <layer name="tmm_vp2_public" type="container" align="lefttop" x="0" y="50" width="100%" height="400" bgcolor="0x000000" bgalpha="0.0" maskchildren="true" bgcapture="false" zorder="5">
+                <layer name="tmm_lvl2_public" type="scrollarea" align="lefttop" x="0" y="0" width="100%" height="308" direction="v" visible="false" maskchildren="true" bounce="false" friction="0.9" momentum="0.5">
+                    <layer name="tmm_i_p_1" style="tmm_item" align="lefttop" x="0" y="4"    html="Большая Баня"      onclick="topmenu_mobile_goto('scene_bathhouseb_1');" />
+                    <layer name="tmm_i_p_2" style="tmm_item" align="lefttop" x="0" y="48"   html="Маленькая Баня"    onclick="topmenu_mobile_goto('scene_bathhousel_1');" />
+                    <layer name="tmm_i_p_3" style="tmm_item" align="lefttop" x="0" y="92"   html="Средняя Баня"      onclick="topmenu_mobile_goto('scene_bathhousem_01');" />
+                    <layer name="tmm_i_p_4" style="tmm_item" align="lefttop" x="0" y="136"  html="Ангар"             onclick="topmenu_mobile_goto('scene_hangar_1');" />
+                    <layer name="tmm_i_p_5" style="tmm_item" align="lefttop" x="0" y="180"  html="Массажный Кабинет" onclick="topmenu_mobile_goto('scene_massage_room_2');" />
+                    <layer name="tmm_i_p_6" style="tmm_item" align="lefttop" x="0" y="224"  html="Ресепшн"           onclick="topmenu_mobile_goto('scene_reception_1');" />
+                    <layer name="tmm_i_p_7" style="tmm_item" align="lefttop" x="0" y="268"  html="Ресторан"          onclick="topmenu_mobile_goto('scene_restaurant_1');" />
+                </layer>
+            </layer>
+
+        </layer>
+    </layer>
+
+    <!-- Мобильные стили (тёмная гамма) -->
+    <style name="tmm_cat_btn"
+           type="text"
+           width="100%"
+           height="52"
+           bgcolor="0xF5B400"
+           bgalpha="0.0"
+           css="color:#F2EFE9; font-family:Arial; font-size:15px; font-weight:bold; text-align:left;"
+           vcenter="true"
+           padding="0 24"
+           bgcapture="true"
+           onover="tween(bgalpha, 0.25, 0.12);"
+           onout="tween(bgalpha, 0.0, 0.12);"
+           />
+
+    <style name="tmm_item"
+           type="text"
+           width="100%"
+           height="40"
+           bgcolor="0xF5B400"
+           bgalpha="0.0"
+           css="color:#F2EFE9; font-family:Arial; font-size:14px; text-align:left;"
+           vcenter="true"
+           padding="0 30"
+           bgcapture="true"
+           onover="tween(bgalpha, 0.25, 0.1);"
+           onout="tween(bgalpha, 0.0, 0.1);"
+           />
+
+    <!-- ============================================================ -->
+    <!-- ЗУМ СЛЕВА (с мобильной адаптацией)                            -->
+    <!-- ============================================================ -->
+    <layer name="zoom_panel" type="container"
+           align="left" edge="left"
+           x="20" x.mobile="10"
+           y="0"
+           width="60" height="240"
+           scale="1" scale.mobile="0.7"
+           keep="true" zorder="90" bgcapture="false">
+        <layer name="zoom_in_btn" style="tm_round_btn"
+               align="top" edge="top" x="0" y="0" html="+"
+               ondown="set(fov_moveforce, -1);" onup="set(fov_moveforce, 0);" onout="set(fov_moveforce, 0);" />
+        <layer name="zoom_indicator" type="container"
+               align="top" edge="top" x="0" y="62" width="52" height="116"
+               bgcolor="0x1A2320" bgalpha="0.9"
+               bgborder="1 0xF5B400 0.5" bgroundedge="26"
+               bgshadow="0 3 10 0x000000 0.5" bgcapture="false">
+            <layer name="zoom_indicator_fill" type="container"
+                   align="bottom" edge="bottom" x="0" y="6" width="36" height="50"
+                   bgcolor="0xF5B400" bgalpha="0.95" bgroundedge="18" enabled="false" />
+        </layer>
+        <layer name="zoom_out_btn" style="tm_round_btn"
+               align="top" edge="top" x="0" y="188" html="−"
+               ondown="set(fov_moveforce, +1);" onup="set(fov_moveforce, 0);" onout="set(fov_moveforce, 0);" />
+    </layer>
+
+    <action name="update_zoom_indicator" scope="local">
+        copy(_fov, view.fov);
+        clamp(_fov, 30, 150);
+        calc(_ratio, (_fov - 30) / 120);
+        calc(_h, 104 - _ratio * 96);
+        set(layer[zoom_indicator_fill].height, get(_h));
+    </action>
+
+    <events name="zoom_indicator_events" keep="true"
+        onviewchange="update_zoom_indicator();"
+        onviewchanged="update_zoom_indicator();"
+        onnewpano="update_zoom_indicator();"
+        onloadcomplete="update_zoom_indicator();" />
+
+    <!-- ============================================================ -->
+    <!-- ОБОЗРЕВАТЕЛЬ ПАНОРАМ (тёмная гамма)                           -->
+    <!-- ============================================================ -->
+    <layer name="pano_browser_toggle"
+           style="tm_round_btn"
+           align="righttop" edge="righttop"
+           x="10" x.mobile="6"
+           y="70" y.mobile="60"
+           width="40" height="40"
+           bgcolor="0xF5B400" bgalpha="0.95"
+           bgborder="1 0xFFFFFF 0.3" bgroundedge="20"
+           bgshadow="0 3 10 0x000000 0.5"
+           css="color:#1A2320; font-family:Arial; font-size:18px; font-weight:bold; text-align:center;"
+           vcenter="true" html="◂" keep="true" zorder="90"
+           bgcapture="true" onclick="toggle_pano_browser();" />
+
+    <layer name="pano_browser" type="container"
+           style="tm_panel"
+           align="righttop" edge="righttop"
+           x="10" x.mobile="6"
+           y="120" y.mobile="110"
+           width="190" height="520"
+           scale="1" scale.mobile="0.85"
+           keep="true" zorder="90" bgcapture="true"
+           maskchildren="true"
+           state="open">
+
+        <layer name="pano_browser_title" type="text"
+               align="lefttop" x="0" y="0" width="190" height="34"
+               bgcolor="0xF5B400" bgalpha="1"
+               css="color:#1A2320; font-family:Arial; font-size:13px; font-weight:bold; text-align:center;"
+               vcenter="true" html="ПАНОРАМЫ" enabled="false" zorder="20" />
+
+        <layer name="pano_browser_viewport" type="container"
+               align="lefttop" x="0" y="38"
+               width="190" height="478"
+               bgcolor="0x000000" bgalpha="0.0"
+               maskchildren="true"
+               bgcapture="false"
+               zorder="1">
+
+            <layer name="pano_browser_scroll" type="scrollarea"
+                   align="lefttop" x="0" y="0"
+                   width="190" height="478"
+                   direction="v"
+                   maskchildren="true"
+                   bounce="false"
+                   friction="0.9"
+                   momentum="0.5"
+                   zorder="1" />
+        </layer>
+    </layer>
+
+    <!-- ============================================================ -->
+    <!-- ИНИЦИАЛИЗАЦИЯ PANO BROWSER                                    -->
+    <!-- ============================================================ -->
+    <action name="pano_browser_init_late">
+        delayedcall(1.5,
+            if(global.pano_browser_current_cat == null,
+                pano_browser_build_from_current();
+            );
+        );
+    </action>
+
+    <action name="pano_browser_on_new_scene">
+        if(global.pb_busy == true, break(); );
+        stopdelayedcall(pb_check);
+        delayedcall(pb_check, 0.1, pano_browser_check_category_change());
+    </action>
+
+    <action name="pano_browser_check_category_change" scope="local">
+        if(global.pb_busy == true, break(); );
+        set(global.pb_busy, true);
+
+        if(xml.scene == null, set(global.pb_busy, false); break(); );
+
+        copy(_nowcat, scene[get(xml.scene)].category);
+        if(_nowcat == null,
+            get_scene_category(get(xml.scene));
+            copy(_nowcat, global.scene_cat_result);
+        );
+
+        if(_nowcat != null AND _nowcat == global.pano_browser_current_cat,
+            pano_browser_sync_active();
+            set(global.pb_busy, false);
+            break();
+        );
+
+        pano_browser_build_from_current();
+        set(global.pb_busy, false);
+    </action>
+
+    <action name="pano_browser_build_from_current" scope="local">
+        if(scene.count == 0, break(); );
+
+        copy(_cat, scene[get(xml.scene)].category);
+        if(_cat == null,
+            get_scene_category(get(xml.scene));
+            copy(_cat, global.scene_cat_result);
+        );
+
+        copy(global.pano_browser_current_cat, get(_cat));
+        pano_browser_build(get(_cat));
+    </action>
+
+    <action name="pano_browser_build" scope="local" args="cat">
+        <!-- Удаляем только то, что реально было создано -->
+        copy(_prev, global.pano_items_count);
+        if(_prev == null, set(_prev, 0); );
+        for(set(_n, 0), _n LT _prev, inc(_n),
+            calc(_old,  'pano_item_'  + _n);
+            calc(_oldt, 'pano_title_' + _n);
+            if(layer[get(_old)],  removelayer(get(_old), true); );
+            if(layer[get(_oldt)], removelayer(get(_oldt), true); );
+        );
+
+        def(global.pano_thumbarray, array);
+        set(_pos, 0);
+
+        for(set(i, 0), i LT scene.count, inc(i),
+            <!-- БЕРЁМ КЭШИРОВАННУЮ КАТЕГОРИЮ, а не пересчитываем -->
+            copy(_scat, scene[get(i)].category);
+            if(_scat == null,
+                get_scene_category(get(scene[get(i)].name));
+                copy(_scat, global.scene_cat_result);
+            );
+            if((cat == null OR _scat == get(cat))
+            AND scene[get(i)].thumburl != null
+            AND scene[get(i)].skipthumb != true,
+                set(global.pano_thumbarray[get(_pos)], get(scene[get(i)]));
+                inc(_pos);
+            );
+        );
+
+        if(_pos == 0 AND cat != null,
+            pano_browser_build(null);
+            break();
+        );
+
+        for(set(i, 0), i LT _pos, inc(i),
+            copy(_s, global.pano_thumbarray[get(i)]);
+            calc(_item,  'pano_item_'  + i);
+            calc(_title, 'pano_title_' + i);
+            calc(_py,    i * 66 + 6);
+
+            addlayer(get(_item));
+            set(layer[get(_item)].url,          get(_s.thumburl));
+            set(layer[get(_item)].keep,         true);
+            set(layer[get(_item)].parent,       'pano_browser_scroll');
+            set(layer[get(_item)].align,        'lefttop');
+            set(layer[get(_item)].x,            6);
+            calc(layer[get(_item)].y, _py);
+            set(layer[get(_item)].width,        178);
+            set(layer[get(_item)].height,       60);
+            set(layer[get(_item)].linkedscene,  get(_s.name));
+            set(layer[get(_item)].bgcolor,      0x2D3E50);
+            set(layer[get(_item)].bgalpha,      1.0);
+            set(layer[get(_item)].bgborder,     '1 0x3A4A45 1');
+            set(layer[get(_item)].bgroundedge,  6);
+            set(layer[get(_item)].bgcapture,    true);
+            set(layer[get(_item)].onclick,      'pano_browser_load(get(linkedscene));');
+            set(layer[get(_item)].onover,       'tween(bgalpha, 0.85, 0.12);');
+            set(layer[get(_item)].onout,        'tween(bgalpha, 1.0, 0.12);');
+
+            addlayer(get(_title));
+            set(layer[get(_title)].type,     'text');
+            set(layer[get(_title)].parent,   get(_item));
+            set(layer[get(_title)].align,    'bottom');
+            set(layer[get(_title)].width,    178);
+            set(layer[get(_title)].height,   20);
+            set(layer[get(_title)].bgcolor,  0x0F1614);
+            set(layer[get(_title)].bgalpha,  0.85);
+            set(layer[get(_title)].css,
+                'color:#F5B400; font-family:Arial; font-size:11px; font-weight:bold; text-align:center;');
+            set(layer[get(_title)].vcenter,  true);
+            set(layer[get(_title)].enabled,  false);
+            set(layer[get(_title)].html,     get(_s.title));
+        );
+
+        calc(_total, _pos * 66 + 6);
+        set(layer[pano_browser_scroll].height, get(_total));
+        copy(global.pano_items_count, _pos);
+
+        <!-- Сбрасываем трекинг активного и один раз подсвечиваем -->
+        set(global.pb_active_item, null);
+        pano_browser_sync_active();
+
+        <!-- ОДИН delayedcall: сразу к активной, без прыжка в топ -->
+        stopdelayedcall(pb_scroll_init);
+        stopdelayedcall(pb_scroll_active);
+        delayedcall(pb_scroll_active, 0.25, pano_browser_scroll_to_active());
+    </action>
+
+    <action name="pano_browser_scroll_to_active">
+        copy(_active, xml.scene);
+        copy(_count, global.pano_items_count);
+        if(_count == null, set(_count, 0); );
+
+        for(set(i, 0), i LT _count, inc(i),
+            calc(_it, 'pano_item_' + i);
+            if(layer[get(_it)],
+                if(layer[get(_it)].linkedscene == get(_active),
+                    copy(_y, layer[get(_it)].y);
+                    calc(_ycenter, _y + 30);
+                    layer[pano_browser_scroll].scrolltocenter(96, get(_ycenter), 0.3);
+                    break();
+                );
+            );
+        );
+    </action>
+
+    <action name="toggle_pano_browser">
+        if(layer[pano_browser].state == 'open',
+            set(layer[pano_browser].state, 'closed');
+            tween(layer[pano_browser].alpha, 0, 0.3, easeInQuad,
+                set(layer[pano_browser].visible, false));
+            set(layer[pano_browser_toggle].html, '▸');
+        ,
+            set(layer[pano_browser].state, 'open');
+            set(layer[pano_browser].visible, true);
+            set(layer[pano_browser].alpha, 0);
+            tween(layer[pano_browser].alpha, 1, 0.3, easeOutQuad);
+            set(layer[pano_browser_toggle].html, '◂');
+            delayedcall(0.35, pano_browser_scroll_to_active(););
+        );
+    </action>
+
+    <action name="pano_browser_load">
+        if(%1 == null OR %1 == '', break(); );
+        if(scene[%1] == null, break(); );
+        loadscene(%1, null, MERGE, BLEND(0.5, easeOutQuad));
+    </action>
+
+    <action name="pano_browser_sync_active" scope="local">
+        copy(_active, xml.scene);
+
+        <!-- Снимаем старую подсветку только с предыдущего активного -->
+        if(global.pb_active_item != null,
+            if(layer[get(global.pb_active_item)],
+                set(layer[get(global.pb_active_item)].bgborder, '1 0x3A4A45 1');
+            );
+        );
+
+        copy(_count, global.pano_items_count);
+        if(_count == null, set(_count, 0); );
+
+        <!-- Ищем только НОВЫЙ активный и подсвечиваем его -->
+        for(set(i, 0), i LT _count, inc(i),
+            calc(_it, 'pano_item_' + i);
+            if(layer[get(_it)],
+                if(layer[get(_it)].linkedscene == get(_active),
+                    set(layer[get(_it)].bgborder, '3 0xF5B400 1.0');
+                    copy(global.pb_active_item, get(_it));
+                    break();
+                );
+            );
+        );
+    </action>
+
+    <!-- ============================================================ -->
+    <!-- ACTIONS ДЛЯ TOPMENU                                          -->
+    <!-- ============================================================ -->
+
+    <action name="topmenu_update_layout">
+        set(_is_mobile, false);
+        if(device.mobile OR stagewidth LT 760, set(_is_mobile, true); );
+
+        if(_is_mobile,
+            set(layer[top_menu_bar].visible, false);
+            set(layer[top_menu_mobile_btn].visible, true);
+            topmenu_close_all();
+            if(layer[top_menu_mobile_panel].visible == false,
+                topmenu_mobile_fit();
+            );
+        ,
+            set(layer[top_menu_bar].visible, true);
+            set(layer[top_menu_mobile_btn].visible, false);
+            topmenu_mobile_close();
+            topmenu_mobile_fit();
+        );
+    </action>
+
+    <action name="topmenu_toggle">
+        set(_t, topmenu_dd_%1);
+        copy(_was_open, layer[get(_t)].visible);
+        topmenu_close_all();
+        if(_was_open == false,
+            topmenu_show(get(_t));
+        );
+    </action>
+
+    <action name="topmenu_show">
+        set(layer[topmenu_click_catcher].visible, true);
+        set(layer[%1], visible=true, alpha=0, y=55);
+        tween(layer[%1].alpha|layer[%1].y, 1|70, 0.25, easeOutQuad);
+    </action>
+
+    <action name="topmenu_hide">
+        if(layer[%1].visible,
+            tween(layer[%1].alpha|layer[%1].y, 0|55, 0.20, easeInQuad, set(layer[%1].visible, false));
+        );
+    </action>
+
+    <action name="topmenu_close_all">
+        set(layer[topmenu_click_catcher].visible, false);
+        topmenu_hide(topmenu_dd_air);
+        topmenu_hide(topmenu_dd_af_small);
+        topmenu_hide(topmenu_dd_af_medium);
+        topmenu_hide(topmenu_dd_af_large);
+        topmenu_hide(topmenu_dd_tents);
+        topmenu_hide(topmenu_dd_public);
+    </action>
+
+    <action name="topmenu_goto">
+        topmenu_close_all();
+        skin_loadscene(%1, get(skin_settings.loadscene_blend));
+    </action>
+
+    <action name="topmenu_mobile_fit">
+        copy(_card_h, layer[tmm_card].pixelheight);
+        if(_card_h == 0, set(_card_h, 0); );
+        if(_card_h LT 200,
+            mul(_card_h, stageheight, 0.9);
+        );
+        sub(_sh, _card_h, 50);
+        if(_sh LT 100, set(_sh, 100); );
+
+        if(layer[tmm_vp1].height != get(_sh),
+            set(layer[tmm_vp1].height,           get(_sh));
+            set(layer[tmm_vp2_air].height,       get(_sh));
+            set(layer[tmm_vp2_af_small].height,  get(_sh));
+            set(layer[tmm_vp2_af_medium].height, get(_sh));
+            set(layer[tmm_vp2_af_large].height,  get(_sh));
+            set(layer[tmm_vp2_tents].height,     get(_sh));
+            set(layer[tmm_vp2_public].height,    get(_sh));
+        );
+    </action>
+
+    <action name="topmenu_mobile_open">
+        set(layer[top_menu_mobile_panel].visible, true);
+        set(layer[top_menu_mobile_panel].alpha, 0);
+        topmenu_mobile_back();
+        topmenu_mobile_fit();
+        tween(layer[top_menu_mobile_panel].alpha, 1, 0.22, easeOutQuad);
+    </action>
+
+    <action name="topmenu_mobile_close">
+        tween(layer[top_menu_mobile_panel].alpha, 0, 0.18, easeInQuad,
+              set(layer[top_menu_mobile_panel].visible, false));
+    </action>
+
+    <action name="topmenu_mobile_hide_items">
+        set(layer[tmm_lvl2_air].visible,       false);
+        set(layer[tmm_lvl2_af_small].visible,  false);
+        set(layer[tmm_lvl2_af_medium].visible, false);
+        set(layer[tmm_lvl2_af_large].visible,  false);
+        set(layer[tmm_lvl2_tents].visible,     false);
+        set(layer[tmm_lvl2_public].visible,    false);
+    </action>
+
+    <action name="topmenu_mobile_cat">
+        set(layer[tmm_lvl1].visible, false);
+        topmenu_mobile_hide_items();
+
+        if(%1 == 'air',
+            set(layer[tmm_lvl2_air].visible, true);
+            set(layer[tmm_title].html, 'Барнхаус');
+            layer[tmm_lvl2_air].scrolltocenter(0, 0, 0.0);
+        );
+        if(%1 == 'af_small',
+            set(layer[tmm_lvl2_af_small].visible, true);
+            set(layer[tmm_title].html, 'A-Frame малый');
+            layer[tmm_lvl2_af_small].scrolltocenter(0, 0, 0.0);
+        );
+        if(%1 == 'af_medium',
+            set(layer[tmm_lvl2_af_medium].visible, true);
+            set(layer[tmm_title].html, 'A-Frame средний');
+            layer[tmm_lvl2_af_medium].scrolltocenter(0, 0, 0.0);
+        );
+        if(%1 == 'af_large',
+            set(layer[tmm_lvl2_af_large].visible, true);
+            set(layer[tmm_title].html, 'A-Frame большой');
+            layer[tmm_lvl2_af_large].scrolltocenter(0, 0, 0.0);
+        );
+        if(%1 == 'tents',
+            set(layer[tmm_lvl2_tents].visible, true);
+            set(layer[tmm_title].html, 'Шатры');
+            layer[tmm_lvl2_tents].scrolltocenter(0, 0, 0.0);
+        );
+        if(%1 == 'public',
+            set(layer[tmm_lvl2_public].visible, true);
+            set(layer[tmm_title].html, 'Общественные места');
+            layer[tmm_lvl2_public].scrolltocenter(0, 0, 0.0);
+        );
+
+        set(layer[tmm_back].visible, true);
+    </action>
+
+    <action name="topmenu_mobile_back">
+        topmenu_mobile_hide_items();
+        set(layer[tmm_lvl1].visible, true);
+        set(layer[tmm_back].visible, false);
+        set(layer[tmm_title].html, 'Помещения');
+        layer[tmm_lvl1].scrolltocenter(0, 0, 0.0);
+    </action>
+
+    <action name="topmenu_mobile_goto">
+        topmenu_mobile_close();
+        skin_loadscene(%1, get(skin_settings.loadscene_blend));
+    </action>
+
+    <action name="topmenu_mobile_noop">
+        <!-- пустышка -->
+    </action>
+
+</krpano>

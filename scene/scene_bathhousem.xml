@@ -1,0 +1,123 @@
+﻿<krpano>
+
+	<!-- Средняя баня -->
+
+	<scene name="scene_bathhousem_01" title="Средняя Баня" onstart="" thumburl="panos/bathhouseM/bathhouseM_01.tiles/thumb.jpg" lat="51.24536111" lng="86.06383333" alt="408.50" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/bathhouseM/bathhouseM_01.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/bathhouseM/bathhouseM_01.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113103075" style="skin_hotspotstyle" ath="-89.992" atv="8.96" depth="1000.0" linkedscene="scene_street_16" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113104766" style="skin_hotspotstyle" ath="-125.372" atv="16.165" depth="1000.0" linkedscene="scene_bathhousem_02" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_bathhousem_02" title="Гардероб" onstart="" thumburl="panos/bathhouseM/bathhouseM_02.tiles/thumb.jpg" lat="51.24527778" lng="86.06380556" alt="400.80" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/bathhouseM/bathhouseM_02.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/bathhouseM/bathhouseM_02.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113104878" style="skin_hotspotstyle" ath="21.09" atv="33.539" depth="1000.0" linkedscene="scene_bathhousem_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113105223" style="skin_hotspotstyle" ath="-104.674" atv="29.655" depth="1000.0" linkedscene="scene_bathhousem_03" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_bathhousem_03" title="Предбанник" onstart="" thumburl="panos/bathhouseM/bathhouseM_03.tiles/thumb.jpg" lat="51.24519444" lng="86.06380556" alt="399.60" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/bathhouseM/bathhouseM_03.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/bathhouseM/bathhouseM_03.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113105306" style="skin_hotspotstyle" ath="28.553" atv="28.226" depth="1000.0" linkedscene="scene_bathhousem_02" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113105508" style="skin_hotspotstyle" ath="65.993" atv="27.53" depth="1000.0" linkedscene="scene_bathhousem_04" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113106130" style="skin_hotspotstyle" ath="143.628" atv="40.165" depth="1000.0" linkedscene="scene_bathhousem_05" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_bathhousem_04" title="Коридор" onstart="" thumburl="panos/bathhouseM/bathhouseM_04.tiles/thumb.jpg" lat="51.24527778" lng="86.06388889" alt="400.10" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/bathhouseM/bathhouseM_04.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/bathhouseM/bathhouseM_04.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113105611" style="skin_hotspotstyle" ath="83.946" atv="69.626" depth="1000.0" linkedscene="scene_bathhousem_07" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113105901" style="skin_hotspotstyle" ath="-90.1" atv="23.375" depth="1000.0" linkedscene="scene_bathhousem_03" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2113143470" style="skin_hotspotstyle" ath="166.896" atv="69.883" depth="1000.0" linkedscene="scene_bathhousem_06" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_bathhousem_05" title="Санузел" onstart="" thumburl="panos/bathhouseM/bathhouseM_05.tiles/thumb.jpg" lat="51.24527778" lng="86.06386111" alt="400.10" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/bathhouseM/bathhouseM_05.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/bathhouseM/bathhouseM_05.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113106240" style="skin_hotspotstyle" ath="-90.733" atv="61.173" depth="1000.0" linkedscene="scene_bathhousem_03" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_bathhousem_06" title="Душ" onstart="" thumburl="panos/bathhouseM/bathhouseM_06.tiles/thumb.jpg" lat="51.24527778" lng="86.06388889" alt="400.10" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/bathhouseM/bathhouseM_06.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/bathhouseM/bathhouseM_06.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113143602" style="skin_hotspotstyle" ath="-5.608" atv="62.931" depth="1000.0" linkedscene="scene_bathhousem_04" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_bathhousem_07" title="Парильня" onstart="" thumburl="panos/bathhouseM/bathhouseM_07.tiles/thumb.jpg" lat="51.24527778" lng="86.06388889" alt="404.50" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/bathhouseM/bathhouseM_07.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/bathhouseM/bathhouseM_07.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113105788" style="skin_hotspotstyle" ath="-99.077" atv="54.683" depth="1000.0" linkedscene="scene_bathhousem_04" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+</krpano>

@@ -1,0 +1,38 @@
+﻿<krpano>
+
+	<!-- Ресепшен -->
+
+	<scene name="scene_reception_1" title="Ресепшн" onstart="" thumburl="panos/reception/reception_1.tiles/thumb.jpg" lat="51.24438889" lng="86.06475000" alt="406.20" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/reception/reception_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/reception/reception_1.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112432968" style="skin_hotspotstyle" ath="-177.623" atv="7.485" depth="1000.0" linkedscene="scene_street_4" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2112433122" style="skin_hotspotstyle" ath="0.382" atv="14.976" depth="1000.0" linkedscene="scene_reception_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_reception_2" title="Фойе" onstart="" thumburl="panos/reception/reception_2.tiles/thumb.jpg" lat="51.24436111" lng="86.06466667" alt="405.60" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/reception/reception_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/reception/reception_2.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2112433203" style="skin_hotspotstyle" ath="171.675" atv="34.392" depth="1000.0" linkedscene="scene_reception_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+</krpano>

@@ -1,0 +1,72 @@
+﻿<krpano>
+
+	<!-- Том Соер -->
+
+	<scene name="scene_tom_sawyer_01" title="Том Сойер" onstart="" thumburl="panos/tom_sawyer/tom_sawyer_01.tiles/thumb.jpg" lat="51.24552778" lng="86.06430556" alt="403.50" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/tom_sawyer/tom_sawyer_01.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/tom_sawyer/tom_sawyer_01.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2113096857" style="skin_hotspotstyle" ath="92.396" atv="11.968" depth="1000.0" linkedscene="scene_street_7_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2114218413" style="skin_hotspotstyle" ath="-174.112" atv="24.285" depth="1000.0" linkedscene="scene_tom_sawyer_02" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_tom_sawyer_02" title="Комната" onstart="" thumburl="panos/tom_sawyer/tom_sawyer_02.tiles/thumb.jpg" lat="51.24552778" lng="86.06419444" alt="403.30" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/tom_sawyer/tom_sawyer_02.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/tom_sawyer/tom_sawyer_02.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2114218498" style="skin_hotspotstyle" ath="1.945" atv="34.086" depth="1000.0" linkedscene="scene_tom_sawyer_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2114218618" style="skin_hotspotstyle" ath="-172.666" atv="47.154" depth="1000.0" linkedscene="scene_tom_sawyer_03" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2114218783" style="skin_hotspotstyle" ath="-179.324" atv="-51.466" depth="1000.0" linkedscene="scene_tom_sawyer_04" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_tom_sawyer_03" title="Санузел" onstart="" thumburl="panos/tom_sawyer/tom_sawyer_03.tiles/thumb.jpg" lat="51.24552778" lng="86.06419444" alt="405.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/tom_sawyer/tom_sawyer_03.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/tom_sawyer/tom_sawyer_03.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2114218693" style="skin_hotspotstyle" ath="6.254" atv="65.555" depth="1000.0" linkedscene="scene_tom_sawyer_02" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_tom_sawyer_04" title="Спальня" onstart="" thumburl="panos/tom_sawyer/tom_sawyer_04.tiles/thumb.jpg" lat="51.24552778" lng="86.06416667" alt="404.90" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/tom_sawyer/tom_sawyer_04.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/tom_sawyer/tom_sawyer_04.tiles/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2114218865" style="skin_hotspotstyle" ath="-4.841" atv="75.683" depth="1000.0" linkedscene="scene_tom_sawyer_02" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+</krpano>

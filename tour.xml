@@ -1,0 +1,280 @@
+﻿﻿<krpano version="1.23" title="Virtual Tour">
+
+	<!-- Кастомизация -->
+	<include url="skin/vtourskin.xml" />
+	<!-- Начальная заставка -->
+	<include url="intro.xml" />
+	<!-- Панорамы -->
+	<!-- Улица -->
+	<include url="scene/scene_street.xml" />
+	<!-- барн хауз -->
+	<include url="scene/scene_air.xml" />
+	<include url="scene/scene_wing.xml" />
+	<!-- А Фрейм Маленький -->
+	<include url="scene/scene_fox.xml" />
+	<include url="scene/scene_pickman.xml" />
+	<include url="scene/scene_tom_sawyer.xml" />
+	<!-- А Фрейм Средний -->
+	<include url="scene/scene_anderson.xml" />
+	<include url="scene/scene_chagall.xml" />
+	<include url="scene/scene_diaghilev.xml" />
+	<include url="scene/scene_freedom.xml" />
+	<include url="scene/scene_frida.xml" />
+	<include url="scene/scene_magellan.xml" />
+	<include url="scene/scene_mink.xml" />
+	<include url="scene/scene_munchausen.xml" />
+	<include url="scene/scene_passepartout.xml" />
+	<include url="scene/scene_robin_christopher.xml" />
+	<include url="scene/scene_satellite.xml" />
+	<include url="scene/scene_scriabin.xml" />
+	<include url="scene/scene_shukshin.xml" />
+	<include url="scene/scene_vrungel.xml" />
+	<!-- А Фрейм Большой -->
+	<include url="scene/scene_grand_chalet.xml" />
+	<include url="scene/scene_k2.xml" />
+	<include url="scene/scene_sibiria.xml" />
+	<!-- Общественные места -->
+	<include url="scene/scene_bathhouseb.xml" />
+	<include url="scene/scene_bathhousel.xml" />
+	<include url="scene/scene_bathhousem.xml" />
+	<include url="scene/scene_hangar.xml" />
+	<include url="scene/scene_massage_room.xml" />
+	<include url="scene/scene_reception.xml" />
+	<include url="scene/scene_restaurant.xml" />
+	<!-- Шатры -->
+	<include url="scene/scene_belukha.xml" />
+	<include url="scene/scene_chevalier.xml" />
+	<include url="scene/scene_copernicus.xml" />
+	<include url="scene/scene_cousteau.xml" />
+	<include url="scene/scene_dacha.xml" />
+	<include url="scene/scene_debussy.xml" />
+	<include url="scene/scene_gypsy.xml" />
+	<include url="scene/scene_hemingway.xml" />
+	<include url="scene/scene_kamchatka.xml" />
+	<include url="scene/scene_king_of_the_montain.xml" />
+	<include url="scene/scene_mobidic.xml" />
+	<include url="scene/scene_narnia.xml" />
+	<include url="scene/scene_number2.xml" />
+	<include url="scene/scene_piligrim.xml" />
+	<include url="scene/scene_presidential.xml" />
+	<include url="scene/scene_roerich.xml" />
+	<include url="scene/scene_the_rabbit_hole.xml" />
+	<include url="scene/scene_titov.xml" />
+	<include url="scene/scene_zen.xml" />
+	
+	<include url="streetmap.xml" />
+	<include url="menu.xml" />
+	
+
+	<!-- ============================================================ -->
+	<!-- КАТЕГОРИИ THUMB-МЕНЮ                                          -->
+	<!-- ============================================================ -->
+
+	<!-- Определяем категорию сцены по её имени.
+	     Результат кладём в ГЛОБАЛЬНУЮ переменную scene_cat_result,
+	     потому что scope="local" изолирует переменные между action'ами. -->
+	<action name="get_scene_category" scope="local" args="scenename">
+		set(global.scene_cat_result, 'other');
+
+		<!-- ============================================================ -->
+		<!-- УЛИЦА — единственная общая группа                              -->
+		<!-- ============================================================ -->
+		if(indexof(scenename, 'scene_street') == 0
+		OR indexof(scenename, 'scene_beach') == 0
+		OR indexof(scenename, 'scene_pool') == 0,
+			set(global.scene_cat_result, 'street');
+		);
+
+		<!-- ============================================================ -->
+		<!-- БАРН ХАУЗ                                                     -->
+		<!-- ============================================================ -->
+		if(indexof(scenename, 'scene_air') == 0,  set(global.scene_cat_result, 'air'); );
+		if(indexof(scenename, 'scene_wing') == 0, set(global.scene_cat_result, 'wing'); );
+
+		<!-- ============================================================ -->
+		<!-- A-FRAME МАЛЕНЬКИЙ                                             -->
+		<!-- ============================================================ -->
+		if(indexof(scenename, 'scene_fox') == 0,         set(global.scene_cat_result, 'fox'); );
+		if(indexof(scenename, 'scene_pickman') == 0,     set(global.scene_cat_result, 'pickman'); );
+		if(indexof(scenename, 'scene_tom_sawyer') == 0,  set(global.scene_cat_result, 'tom_sawyer'); );
+
+		<!-- ============================================================ -->
+		<!-- A-FRAME СРЕДНИЙ                                               -->
+		<!-- ============================================================ -->
+		if(indexof(scenename, 'scene_anderson') == 0,           set(global.scene_cat_result, 'anderson'); );
+		if(indexof(scenename, 'scene_diaghilev') == 0,          set(global.scene_cat_result, 'diaghilev'); );
+		if(indexof(scenename, 'scene_freedom') == 0,            set(global.scene_cat_result, 'freedom'); );
+		if(indexof(scenename, 'scene_frida') == 0,              set(global.scene_cat_result, 'frida'); );
+		if(indexof(scenename, 'scene_magellan') == 0,           set(global.scene_cat_result, 'magellan'); );
+		if(indexof(scenename, 'scene_mink') == 0,               set(global.scene_cat_result, 'mink'); );
+		if(indexof(scenename, 'scene_munchausen') == 0,         set(global.scene_cat_result, 'munchausen'); );
+		if(indexof(scenename, 'scene_passepartout') == 0,       set(global.scene_cat_result, 'passepartout'); );
+		if(indexof(scenename, 'scene_robin_christopher') == 0,  set(global.scene_cat_result, 'robin_christopher'); );
+		if(indexof(scenename, 'scene_satellite') == 0,          set(global.scene_cat_result, 'satellite'); );
+		if(indexof(scenename, 'scene_scriabin') == 0,           set(global.scene_cat_result, 'scriabin'); );
+		if(indexof(scenename, 'scene_shukshin') == 0,           set(global.scene_cat_result, 'shukshin'); );
+		if(indexof(scenename, 'scene_vrungel') == 0,            set(global.scene_cat_result, 'vrungel'); );
+
+		<!-- ============================================================ -->
+		<!-- A-FRAME БОЛЬШОЙ                                               -->
+		<!-- ============================================================ -->
+		if(indexof(scenename, 'scene_grand_chalet') == 0,  set(global.scene_cat_result, 'grand_chalet'); );
+		if(indexof(scenename, 'scene_k2') == 0,            set(global.scene_cat_result, 'k2'); );
+		if(indexof(scenename, 'scene_sibiria') == 0,       set(global.scene_cat_result, 'sibiria'); );
+
+		<!-- ============================================================ -->
+		<!-- ОБЩЕСТВЕННЫЕ МЕСТА                                            -->
+		<!-- ============================================================ -->
+		if(indexof(scenename, 'scene_bathhouseb') == 0,    set(global.scene_cat_result, 'bathhouseb'); );
+		if(indexof(scenename, 'scene_bathhousel') == 0,    set(global.scene_cat_result, 'bathhousel'); );
+		if(indexof(scenename, 'scene_bathhousem') == 0,    set(global.scene_cat_result, 'bathhousem'); );
+		if(indexof(scenename, 'scene_hangar') == 0,        set(global.scene_cat_result, 'hangar'); );
+		if(indexof(scenename, 'scene_massage_room') == 0,  set(global.scene_cat_result, 'massage_room'); );
+		if(indexof(scenename, 'scene_reception') == 0,     set(global.scene_cat_result, 'reception'); );
+		if(indexof(scenename, 'scene_restaurant') == 0,    set(global.scene_cat_result, 'restaurant'); );
+
+		<!-- ============================================================ -->
+		<!-- ШАТРЫ                                                         -->
+		<!-- ============================================================ -->
+		if(indexof(scenename, 'scene_belukha') == 0,              set(global.scene_cat_result, 'belukha'); );
+		if(indexof(scenename, 'scene_chevalier') == 0,            set(global.scene_cat_result, 'chevalier'); );
+		if(indexof(scenename, 'scene_copernicus') == 0,           set(global.scene_cat_result, 'copernicus'); );
+		if(indexof(scenename, 'scene_cousteau') == 0,             set(global.scene_cat_result, 'cousteau'); );
+		if(indexof(scenename, 'scene_dacha') == 0,                set(global.scene_cat_result, 'dacha'); );
+		if(indexof(scenename, 'scene_debussy') == 0,              set(global.scene_cat_result, 'debussy'); );
+		if(indexof(scenename, 'scene_gypsy') == 0,                set(global.scene_cat_result, 'gypsy'); );
+		if(indexof(scenename, 'scene_hemingway') == 0,            set(global.scene_cat_result, 'hemingway'); );
+		if(indexof(scenename, 'scene_kamchatka') == 0,            set(global.scene_cat_result, 'kamchatka'); );
+		if(indexof(scenename, 'scene_king_of_the_montain') == 0,  set(global.scene_cat_result, 'king_of_the_montain'); );
+		if(indexof(scenename, 'scene_mobidic') == 0,              set(global.scene_cat_result, 'mobidic'); );
+		if(indexof(scenename, 'scene_narnia') == 0,               set(global.scene_cat_result, 'narnia'); );
+		if(indexof(scenename, 'scene_number2') == 0,              set(global.scene_cat_result, 'number2'); );
+		if(indexof(scenename, 'scene_piligrim') == 0,             set(global.scene_cat_result, 'piligrim'); );
+		if(indexof(scenename, 'scene_presidential') == 0,         set(global.scene_cat_result, 'presidential'); );
+		if(indexof(scenename, 'scene_roerich') == 0,              set(global.scene_cat_result, 'roerich'); );
+		if(indexof(scenename, 'scene_the_rabbit_hole') == 0,      set(global.scene_cat_result, 'the_rabbit_hole'); );
+		if(indexof(scenename, 'scene_titov') == 0,                set(global.scene_cat_result, 'titov'); );
+		if(indexof(scenename, 'scene_zen') == 0,                  set(global.scene_cat_result, 'zen'); );
+	</action>
+
+	<!-- Назначаем категории всем сценам (читаем результат из global) -->
+	<action name="assign_scene_categories" scope="local">
+		for(set(i,0), i LT scene.count, inc(i),
+			get_scene_category(get(scene[get(i)].name));
+			copy(scene[get(i)].category, global.scene_cat_result);
+		);
+		set(global.categories_assigned, true);
+	</action>
+
+	<!-- Проверка: сменилась ли категория. Если да — пересобираем thumb-меню -->
+	<action name="check_category_change" scope="local">
+		<!-- thumbs отключены — вообще нечего делать -->
+		if(skin_settings.thumbs != true, break(); );
+		if(global.categories_assigned != true, break(); );
+		if(xml.scene == null, break(); );
+		copy(_cat, scene[get(xml.scene)].category);
+		if(_cat == null, break(); );
+		if(global.current_thumb_category == get(_cat), break(); );
+		copy(global.current_thumb_category, get(_cat));
+
+		copy(_tw, skin_settings.thumbs_width);
+		copy(_th, skin_settings.thumbs_height);
+		copy(_tp, skin_settings.thumbs_padding);
+		calc(_xoffset, _tw + _tp);
+		calc(_xcenter, _xoffset * 0.5);
+
+		set(_pos, 0);
+		for(set(i,0), i LT thumbarray.length, inc(i),
+			copy(_sname, thumbarray[get(i)].name);
+			calc(_layername, 'skin_thumb_' + i);
+			if(scene[get(_sname)].category == get(_cat),
+				set(layer[get(_layername)].visible, true);
+				set(layer[get(_layername)].enabled, true);
+				calc(layer[get(_layername)].x, _tp + _pos * _xoffset);
+				set(scene[get(_sname)].thumbx, calc(_tp + _pos * _xoffset + _xcenter));
+				set(scene[get(_sname)].thumby, get(_tp));
+				inc(_pos);
+			,
+				set(layer[get(_layername)].visible, false);
+				set(layer[get(_layername)].enabled, false);
+			);
+		);
+
+		calc(_barwidth, _xoffset * _pos + _tp);
+		set(layer[skin_thumbs].width, get(_barwidth));
+		skin_updatethumbsview(true);
+	</action>
+
+	<!-- Событие на смену сцены -->
+	<events name="category_thumb_events" keep="true"
+        onnewscene="check_category_change(); update_map_visibility(); pano_browser_on_new_scene();"
+        />
+
+	<!-- ============================================================ -->
+
+	<!-- Действие при запуске - загрузка первой сцены -->
+	<action name="startup" autorun="onstart">
+		if(scene.count == 0,
+			trace('STARTUP: no scenes loaded!');
+			break();
+		);
+
+		if(startscene == null OR startscene == '' OR !scene[get(startscene)],
+			copy(startscene, scene[0].name);
+		);
+
+		assign_scene_categories();
+		delete(global.current_thumb_category);
+		loadscene(get(startscene), null, MERGE);
+
+		delayedcall(0.15,
+			check_category_change();
+			update_map_visibility();
+			update_zoom_indicator();
+		);
+	</action>
+
+	<action name="update_map_visibility" scope="local">
+		if(xml.scene == null, break(); );
+		if(scene[get(xml.scene)].category == null, break(); );
+
+		if(scene[get(xml.scene)].category == 'street',
+			<!-- Улица: карта + радар видны -->
+			set(layer[street_map_container].visible, true);
+			set(plugin[radar_street].visible, true);
+			set(layer[activespot_street].visible, true);
+		,
+			<!-- Не улица: карта видна, радар скрыт -->
+			set(layer[street_map_container].visible, true);
+			set(plugin[radar_street].visible, false);
+			set(layer[activespot_street].visible, false);
+		);
+	</action>
+
+	<action name="show_floor_map">
+		set(layer[street_map_container].visible, false);
+		set(layer[floorplans_container].visible, true);
+
+		set(plugin[radar_street].visible, false);
+		set(layer[activespot_street].visible, false);
+		set(layer[activespot_street].parent, null);
+		set(plugin[radar_street].parent, null);
+
+		set(plugin[radar_lab].visible, true);
+		set(layer[activespot_lab].visible, true);
+	</action>
+
+	<action name="show_street_map">
+		set(layer[floorplans_container].visible, false);
+		set(layer[street_map_container].visible, true);
+
+		set(plugin[radar_lab].visible, false);
+		set(layer[activespot_lab].visible, false);
+		set(layer[activespot_lab].parent, null);
+		set(plugin[radar_lab].parent, null);
+
+		set(plugin[radar_street].visible, true);
+		set(layer[activespot_street].visible, true);
+	</action>
+
+</krpano>

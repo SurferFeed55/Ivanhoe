@@ -1,0 +1,290 @@
+<krpano>
+
+	<!-- ============================================================ -->
+	<!-- КАРТА: фон-подложка ЗОЛОТАЯ (в цвет меню) — тёмной каймы нет  -->
+	<!-- Скругление 14px хорошо видно, maskchildren обрезает углы PNG  -->
+	<!-- ============================================================ -->
+	<layer name="street_map_wrapper"
+		type="container"
+		align="bottom" x="0" y="0"
+		width="656"
+		height="263"
+		scale="1"
+		scale.mobile="0.6"
+		keep="true"
+		zorder="100"
+		state="open"
+		bgcapture="false"
+		>
+
+		<layer name="street_map_container"
+			type="container"
+			bgcolor="0xF5B400"
+			bgalpha="1"
+			alpha="1"
+			width="656"
+			height="263"
+			align="lefttop" x="0" y="0"
+			keep="true"
+			maskchildren="true"
+			zorder="5"
+			bgroundedge="14"
+			bgshadow="0 6 22 0x000000 0.65"
+			>
+
+			<layer name="street_map_image" type="image"
+				url="skin/streetmap.png"
+				width="640" height="247"
+				align="center"
+				enabled="true"
+				onclick="toggle_street_map_size"
+				>
+	            <layer name="dot_scene_street_1" style="street_mapspot" x="338" y="228" onclick="skin_loadscene(scene_street_1, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_2" style="street_mapspot" x="338" y="205" onclick="skin_loadscene(scene_street_2, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_3" style="street_mapspot" x="350" y="188" onclick="skin_loadscene(scene_street_3, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_3_1" style="street_mapspot" x="344" y="164" onclick="skin_loadscene(scene_street_3_1, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_4" style="street_mapspot" x="392" y="190" onclick="skin_loadscene(scene_street_4, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_5" style="street_mapspot" x="415" y="193" onclick="skin_loadscene(scene_street_5, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_5_1" style="street_mapspot" x="400" y="174" onclick="skin_loadscene(scene_street_5_1, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_5_2" style="street_mapspot" x="389" y="157" onclick="skin_loadscene(scene_street_5_2, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_6" style="street_mapspot" x="467" y="163" onclick="skin_loadscene(scene_street_6, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_7" style="street_mapspot" x="505" y="156" onclick="skin_loadscene(scene_street_7, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_7_1" style="street_mapspot" x="505" y="136" onclick="skin_loadscene(scene_street_7_1, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_pool" style="street_mapspot" x="480" y="126" onclick="skin_loadscene(scene_pool, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_7_2" style="street_mapspot" x="501" y="100" onclick="skin_loadscene(scene_street_7_2, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_7_3" style="street_mapspot" x="505" y="79" onclick="skin_loadscene(scene_street_7_3, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_7_4" style="street_mapspot" x="511" y="64" onclick="skin_loadscene(scene_street_7_4, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_8" style="street_mapspot" x="530" y="158" onclick="skin_loadscene(scene_street_8, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_8_1" style="street_mapspot" x="531" y="140" onclick="skin_loadscene(scene_street_8_1, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_9" style="street_mapspot" x="576" y="159" onclick="skin_loadscene(scene_street_9, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_10" style="street_mapspot" x="581" y="135" onclick="skin_loadscene(scene_street_10, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_11" style="street_mapspot" x="579" y="80" onclick="skin_loadscene(scene_street_11, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_12" style="street_mapspot" x="579" y="47" onclick="skin_loadscene(scene_street_12, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_12_1" style="street_mapspot" x="590" y="22" onclick="skin_loadscene(scene_street_12_1, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_13" style="street_mapspot" x="515" y="50" onclick="skin_loadscene(scene_street_13, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_14" style="street_mapspot" x="498" y="52" onclick="skin_loadscene(scene_street_14, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_15" style="street_mapspot" x="481" y="54" onclick="skin_loadscene(scene_street_15, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_16" style="street_mapspot" x="462" y="57" onclick="skin_loadscene(scene_street_16, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_17" style="street_mapspot" x="444" y="61" onclick="skin_loadscene(scene_street_17, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_18" style="street_mapspot" x="426" y="66" onclick="skin_loadscene(scene_street_18, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_19" style="street_mapspot" x="409" y="72" onclick="skin_loadscene(scene_street_19, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_20" style="street_mapspot" x="392" y="76" onclick="skin_loadscene(scene_street_20, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_21" style="street_mapspot" x="376" y="81" onclick="skin_loadscene(scene_street_21, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_21_1" style="street_mapspot" x="346" y="84" onclick="skin_loadscene(scene_street_21_1, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_21_2" style="street_mapspot" x="321" y="87" onclick="skin_loadscene(scene_street_21_2, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_22" style="street_mapspot" x="367" y="97" onclick="skin_loadscene(scene_street_22, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_23" style="street_mapspot" x="359" y="113" onclick="skin_loadscene(scene_street_23, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_24" style="street_mapspot" x="362" y="140" onclick="skin_loadscene(scene_street_24, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_25" style="street_mapspot" x="333" y="142" onclick="skin_loadscene(scene_street_25, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_26" style="street_mapspot" x="311" y="110" onclick="skin_loadscene(scene_street_26, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_27" style="street_mapspot" x="299" y="91" onclick="skin_loadscene(scene_street_27, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_28" style="street_mapspot" x="282" y="78" onclick="skin_loadscene(scene_street_28, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_28_1" style="street_mapspot" x="270" y="62" onclick="skin_loadscene(scene_street_28_1, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_28_2" style="street_mapspot" x="283" y="46" onclick="skin_loadscene(scene_street_28_2, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_29" style="street_mapspot" x="265" y="85" onclick="skin_loadscene(scene_street_29, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_30" style="street_mapspot" x="246" y="87" onclick="skin_loadscene(scene_street_30, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_32" style="street_mapspot" x="184" y="113" onclick="skin_loadscene(scene_street_32, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_32_1" style="street_mapspot" x="194" y="96" onclick="skin_loadscene(scene_street_32_1, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_33" style="street_mapspot" x="146" y="115" onclick="skin_loadscene(scene_street_33, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_34" style="street_mapspot" x="111" y="148" onclick="skin_loadscene(scene_street_34, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_34_1" style="street_mapspot" x="92" y="145" onclick="skin_loadscene(scene_street_34_1, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_34_2" style="street_mapspot" x="80" y="145" onclick="skin_loadscene(scene_street_34_2, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_34_3" style="street_mapspot" x="80" y="133" onclick="skin_loadscene(scene_street_34_3, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_34_4" style="street_mapspot" x="67" y="145" onclick="skin_loadscene(scene_street_34_4, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_34_5" style="street_mapspot" x="57" y="145" onclick="skin_loadscene(scene_street_34_5, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_34_6" style="street_mapspot" x="47" y="145" onclick="skin_loadscene(scene_street_34_6, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_34_7" style="street_mapspot" x="37" y="145" onclick="skin_loadscene(scene_street_34_7, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_34_8" style="street_mapspot" x="36" y="109" onclick="skin_loadscene(scene_street_34_8, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_34_9" style="street_mapspot" x="27" y="145" onclick="skin_loadscene(scene_street_34_9, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_34_10" style="street_mapspot" x="17" y="145" onclick="skin_loadscene(scene_street_34_10, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_beach_1" style="street_mapspot" x="17" y="110" onclick="skin_loadscene(scene_beach_1, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_beach_2" style="street_mapspot" x="7" y="120" onclick="skin_loadscene(scene_beach_2, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_35" style="street_mapspot" x="127" y="172" onclick="skin_loadscene(scene_street_35, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_36" style="street_mapspot" x="159" y="198" onclick="skin_loadscene(scene_street_36, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_37" style="street_mapspot" x="186" y="202" onclick="skin_loadscene(scene_street_37, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_38" style="street_mapspot" x="204" y="198" onclick="skin_loadscene(scene_street_38, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_39" style="street_mapspot" x="219" y="198" onclick="skin_loadscene(scene_street_39, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_40" style="street_mapspot" x="251" y="203" onclick="skin_loadscene(scene_street_40, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_41" style="street_mapspot" x="290" y="201" onclick="skin_loadscene(scene_street_41, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_41_1" style="street_mapspot" x="283" y="174" onclick="skin_loadscene(scene_street_41_1, get(skin_settings.loadscene_blend))"/>
+	            <layer name="dot_scene_street_42" style="street_mapspot" x="317" y="187" onclick="skin_loadscene(scene_street_42, get(skin_settings.loadscene_blend))"/>
+			</layer>
+
+			<plugin name="radar_street"
+				keep="true"
+	        	visible="false"
+				url.html5="plugins/radar.js"
+				align="center"
+				edge="center"
+				x="0" y="0"
+				scale="0.2"
+				heading="0.0"
+				headingoffset="0.0"
+				fillcolor="0x45bfe3"
+				fillalpha="0.5"
+				linewidth="0.0"
+				linecolor="0xFFFFFFFF"
+				linealpha="0.3"
+				invert="false"
+			/>
+
+			<layer name="activespot_street"
+				keep="true"
+	        	visible="false"
+				type="container"
+				width="15"
+				height="15"
+				bgalpha="1"
+				bgroundedge="15"
+				bgborder="2 0x45bfe3 1"
+				bgcolor="0x45bfe3"
+				bgshadow="0 0 10 3 0x000000 0.25"
+				align="center"
+				edge="center"
+				enabled="true"
+				x="0" y="0"
+			/>
+
+		</layer>
+	</layer>
+
+	<!-- ============================================================ -->
+	<!-- Кнопка сворачивания: уменьшена до 40×40 (как pano_toggle),    -->
+	<!-- добавлена мобильная версия 34×34                              -->
+	<!-- ============================================================ -->
+	<layer name="street_map_toggle"
+		type="text"
+		align="bottom" edge="bottom"
+		x="0"
+		y="273"
+		y.mobile="168"
+		width="40" height="40"
+		width.mobile="34" height.mobile="34"
+		bgcolor="0xF5B400" bgalpha="0.95"
+		bgborder="1 0xFFFFFF 0.3"
+		bgroundedge="20"
+		bgroundedge.mobile="17"
+		bgshadow="0 3 10 0x000000 0.5"
+		css="color:#1A2320; font-family:Arial; font-size:18px; font-weight:bold; text-align:center;"
+		vcenter="true"
+		html="▼"
+		keep="true"
+		zorder="110"
+		bgcapture="true"
+		onclick="toggle_street_map_container();"
+		onover="tween(scale,1.08,0.12);"
+		onout="tween(scale,1.0,0.12);"
+		/>
+
+	<!-- Стиль точек -->
+	<style name="street_mapspot"
+		type="container"
+		width="8"
+		height="8"
+		bgalpha="1"
+		bgroundedge="15"
+		bgborder="2 0xFF0000 1"
+		bgcolor="0xFFFFFFFF"
+		bgshadow="0 0 10 3 0x000000 0.25"
+		align="lefttop"
+		edge="center"
+		enabled="true"
+		bgcapture="true"
+	/>
+
+    <!-- Действия для управления картами -->
+    <action name="update_street_radar">
+        set(layer[activespot_street].parent, %1);
+        set(plugin[radar_street].parent, %1);
+        set(layer[activespot_street].visible, true);
+        set(plugin[radar_street].visible, true);
+        tween(plugin[radar_street].heading, %2);
+    </action>
+
+	<!-- Сворачивание/разворачивание карты -->
+	<action name="toggle_street_map_container">
+		if(layer[street_map_wrapper].state == 'open',
+			<!-- СКРЫТЬ: карта вместе с золотой подложкой уезжает вниз -->
+			set(layer[street_map_wrapper].state, 'closed');
+
+			tween(layer[street_map_container].alpha, 0, 0.35, easeInQuad);
+			tween(layer[street_map_container].y, 280, 0.35, easeInQuad,
+				set(layer[street_map_container].visible, false));
+
+			set(layer[street_map_toggle].html, '▲');
+			tween(layer[street_map_toggle].y, 20, 0.35, easeInQuad);
+		,
+			<!-- ПОКАЗАТЬ: карта вместе с золотой подложкой возвращается -->
+			set(layer[street_map_wrapper].state, 'open');
+
+			set(layer[street_map_container].visible, true);
+			set(layer[street_map_container].alpha, 0);
+			set(layer[street_map_container].y, 280);
+			tween(layer[street_map_container].alpha, 1, 0.35, easeOutQuad);
+			tween(layer[street_map_container].y, 0, 0.35, easeOutQuad);
+
+			set(layer[street_map_toggle].html, '▼');
+			if(device.mobile,
+				tween(layer[street_map_toggle].y, 168, 0.35, easeOutQuad);
+			,
+				tween(layer[street_map_toggle].y, 273, 0.35, easeOutQuad);
+			);
+		);
+	</action>
+
+	<!-- Увеличение/уменьшение карты -->
+	<action name="toggle_street_map_size">
+		set(state, get(layer[street_map_wrapper].state));
+
+		if(get(state) == minimized,
+			if(device.mobile,
+				tween(layer[street_map_wrapper].scale, 0.85);
+				,
+				tween(layer[street_map_wrapper].scale, 1.5);
+			);
+			set(layer[street_map_wrapper].state, maximized);
+			,
+			if(device.mobile,
+				tween(layer[street_map_wrapper].scale, 0.45);
+				,
+				tween(layer[street_map_wrapper].scale, 1);
+			);
+			set(layer[street_map_wrapper].state, minimized);
+		);
+	</action>
+
+    <action name="update_map_visibility" scope="local">
+        if(xml.scene == null, break(); );
+        if(scene[get(xml.scene)].category == null, break(); );
+
+        if(scene[get(xml.scene)].category == 'street',
+            set(plugin[radar_street].visible, true);
+            set(layer[activespot_street].visible, true);
+        ,
+            set(plugin[radar_street].visible, false);
+            set(layer[activespot_street].visible, false);
+        );
+    </action>
+
+    <action name="switch_to_floor_map">
+        set(layer[street_map_wrapper].visible, false);
+        set(layer[street_map_toggle].visible, false);
+        set(layer[floorplans_container].visible, true);
+        set(plugin[street_radar].visible, false);
+        set(plugin[radar].visible, true);
+        update_floor_buttons();
+    </action>
+
+    <action name="show_under_construction">
+        addlayer(under_construction_msg);
+        set(layer[under_construction_msg], type=text,
+            html='<b>В разработке</b>',
+            css='color:#FFFFFF; font-family:Arial; font-size:20px; text-align:center;',
+            bgcolor=0x000000, bgalpha=0.7,
+            align=center, width=300, height=80,
+            bgroundedge=20, bgborder='2 0xFFFFFF 0.5',
+            onloaded='delayedcall(2.0, removelayer(get(name));)'
+        );
+    </action>
+
+</krpano>

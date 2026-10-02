@@ -1,0 +1,63 @@
+<krpano>
+
+    <layer name="intro" 
+			type="container"
+			keep="true"
+			width="100%"
+			height="100%"
+			bgcolor="0x000000"
+			bgalpha="0.8"
+			zorder="9999"
+			enabled="true"
+			bgcapture="true"
+			onloaded="on_intro_loaded()"
+			onclick="on_intro_click()" >
+
+		<!-- Логотип: на мобилке меньше и выше -->
+		<layer name="intro_logo"
+			enabled="false"
+			alpha="0"
+			url="skin/logo.png"
+			align="center"
+			y="0"        y.mobile="0"
+			scale="0.8"    scale.mobile="0.35" />
+
+		<!-- Desktop guide -->
+		<layer name="intro_guide_desktop"
+			url="skin/help_desktop.png"
+			enabled="false"
+			alpha="0"
+			align="center"
+			y="270"
+			scale="0.5"
+			devices="desktop" />
+
+		<!-- Mobile guide: ширина 85% экрана, высота по пропорции -->
+		<layer name="intro_guide_mobile"
+			url="skin/help_mobile.png"
+			enabled="false"
+			alpha="0"
+			align="center"
+			y="180"
+			width="50%"
+			height="prop"
+			devices="mobile" />
+	</layer>
+
+	<action name="on_intro_click">
+		tween(layer[intro].alpha, 0);
+		set(layer[intro].enabled, false);
+	</action>
+
+	<action name="on_intro_loaded">
+		delayedcall(0.5,
+			tween(layer[intro_logo].alpha, 1);
+			if(device.mobile,
+				tween(layer[intro_guide_mobile].alpha, 1);
+			  ,
+				tween(layer[intro_guide_desktop].alpha, 1);
+			);
+		);
+	</action>
+    
+</krpano>
